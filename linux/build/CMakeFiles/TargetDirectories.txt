@@ -1,0 +1,3 @@
+/home/anhquan7826/Desktop/unisync/unisync_linux/build/CMakeFiles/unisync_linux.dir
+/home/anhquan7826/Desktop/unisync/unisync_linux/build/CMakeFiles/edit_cache.dir
+/home/anhquan7826/Desktop/unisync/unisync_linux/build/CMakeFiles/rebuild_cache.dir

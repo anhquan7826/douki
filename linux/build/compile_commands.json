@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/home/anhquan7826/Desktop/unisync/unisync_linux/build",
+  "command": "/usr/bin/cc -I/home/anhquan7826/Desktop/unisync/unisync_linux/include -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/uuid -I/usr/include/json-glib-1.0 -g -o CMakeFiles/unisync_linux.dir/src/main.c.o -c /home/anhquan7826/Desktop/unisync/unisync_linux/src/main.c",
+  "file": "/home/anhquan7826/Desktop/unisync/unisync_linux/src/main.c",
+  "output": "CMakeFiles/unisync_linux.dir/src/main.c.o"
+},
+{
+  "directory": "/home/anhquan7826/Desktop/unisync/unisync_linux/build",
+  "command": "/usr/bin/cc -I/home/anhquan7826/Desktop/unisync/unisync_linux/include -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/uuid -I/usr/include/json-glib-1.0 -g -o CMakeFiles/unisync_linux.dir/src/core/mdns.c.o -c /home/anhquan7826/Desktop/unisync/unisync_linux/src/core/mdns.c",
+  "file": "/home/anhquan7826/Desktop/unisync/unisync_linux/src/core/mdns.c",
+  "output": "CMakeFiles/unisync_linux.dir/src/core/mdns.c.o"
+},
+{
+  "directory": "/home/anhquan7826/Desktop/unisync/unisync_linux/build",
+  "command": "/usr/bin/cc -I/home/anhquan7826/Desktop/unisync/unisync_linux/include -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/uuid -I/usr/include/json-glib-1.0 -g -o CMakeFiles/unisync_linux.dir/src/core/socket.c.o -c /home/anhquan7826/Desktop/unisync/unisync_linux/src/core/socket.c",
+  "file": "/home/anhquan7826/Desktop/unisync/unisync_linux/src/core/socket.c",
+  "output": "CMakeFiles/unisync_linux.dir/src/core/socket.c.o"
+},
+{
+  "directory": "/home/anhquan7826/Desktop/unisync/unisync_linux/build",
+  "command": "/usr/bin/cc -I/home/anhquan7826/Desktop/unisync/unisync_linux/include -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/uuid -I/usr/include/json-glib-1.0 -g -o CMakeFiles/unisync_linux.dir/src/core/unisync-process.c.o -c /home/anhquan7826/Desktop/unisync/unisync_linux/src/core/unisync-process.c",
+  "file": "/home/anhquan7826/Desktop/unisync/unisync_linux/src/core/unisync-process.c",
+  "output": "CMakeFiles/unisync_linux.dir/src/core/unisync-process.c.o"
+},
+{
+  "directory": "/home/anhquan7826/Desktop/unisync/unisync_linux/build",
+  "command": "/usr/bin/cc -I/home/anhquan7826/Desktop/unisync/unisync_linux/include -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/uuid -I/usr/include/json-glib-1.0 -g -o CMakeFiles/unisync_linux.dir/src/dbus/dbus-iface-device.c.o -c /home/anhquan7826/Desktop/unisync/unisync_linux/src/dbus/dbus-iface-device.c",
+  "file": "/home/anhquan7826/Desktop/unisync/unisync_linux/src/dbus/dbus-iface-device.c",
+  "output": "CMakeFiles/unisync_linux.dir/src/dbus/dbus-iface-device.c.o"
+},
+{
+  "directory": "/home/anhquan7826/Desktop/unisync/unisync_linux/build",
+  "command": "/usr/bin/cc -I/home/anhquan7826/Desktop/unisync/unisync_linux/include -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/uuid -I/usr/include/json-glib-1.0 -g -o CMakeFiles/unisync_linux.dir/src/dbus/dbus-device.c.o -c /home/anhquan7826/Desktop/unisync/unisync_linux/src/dbus/dbus-device.c",
+  "file": "/home/anhquan7826/Desktop/unisync/unisync_linux/src/dbus/dbus-device.c",
+  "output": "CMakeFiles/unisync_linux.dir/src/dbus/dbus-device.c.o"
+},
+{
+  "directory": "/home/anhquan7826/Desktop/unisync/unisync_linux/build",
+  "command": "/usr/bin/cc -I/home/anhquan7826/Desktop/unisync/unisync_linux/include -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/uuid -I/usr/include/json-glib-1.0 -g -o CMakeFiles/unisync_linux.dir/src/model/device-info.c.o -c /home/anhquan7826/Desktop/unisync/unisync_linux/src/model/device-info.c",
+  "file": "/home/anhquan7826/Desktop/unisync/unisync_linux/src/model/device-info.c",
+  "output": "CMakeFiles/unisync_linux.dir/src/model/device-info.c.o"
+},
+{
+  "directory": "/home/anhquan7826/Desktop/unisync/unisync_linux/build",
+  "command": "/usr/bin/cc -I/home/anhquan7826/Desktop/unisync/unisync_linux/include -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/uuid -I/usr/include/json-glib-1.0 -g -o CMakeFiles/unisync_linux.dir/src/model/device-message.c.o -c /home/anhquan7826/Desktop/unisync/unisync_linux/src/model/device-message.c",
+  "file": "/home/anhquan7826/Desktop/unisync/unisync_linux/src/model/device-message.c",
+  "output": "CMakeFiles/unisync_linux.dir/src/model/device-message.c.o"
+},
+{
+  "directory": "/home/anhquan7826/Desktop/unisync/unisync_linux/build",
+  "command": "/usr/bin/cc -I/home/anhquan7826/Desktop/unisync/unisync_linux/include -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/uuid -I/usr/include/json-glib-1.0 -g -o CMakeFiles/unisync_linux.dir/src/utils/json-util.c.o -c /home/anhquan7826/Desktop/unisync/unisync_linux/src/utils/json-util.c",
+  "file": "/home/anhquan7826/Desktop/unisync/unisync_linux/src/utils/json-util.c",
+  "output": "CMakeFiles/unisync_linux.dir/src/utils/json-util.c.o"
+},
+{
+  "directory": "/home/anhquan7826/Desktop/unisync/unisync_linux/build",
+  "command": "/usr/bin/cc -I/home/anhquan7826/Desktop/unisync/unisync_linux/include -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/uuid -I/usr/include/json-glib-1.0 -g -o CMakeFiles/unisync_linux.dir/src/utils/socket-util.c.o -c /home/anhquan7826/Desktop/unisync/unisync_linux/src/utils/socket-util.c",
+  "file": "/home/anhquan7826/Desktop/unisync/unisync_linux/src/utils/socket-util.c",
+  "output": "CMakeFiles/unisync_linux.dir/src/utils/socket-util.c.o"
+}
+]

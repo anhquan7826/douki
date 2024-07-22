@@ -1,0 +1,11 @@
+# ninja log v5
+3	323	1720423237386158543	CMakeFiles/unisync_linux.dir/src/main.c.o	8c087075910b0a77
+3	186	1720411149441042423	CMakeFiles/unisync_linux.dir/src/core/socket.c.o	93d1cc16896862ae
+227	311	1720423525521999127	unisync_linux	e66fb4c17810ed6e
+4	134	1718959696234369539	CMakeFiles/unisync_linux.dir/src/data/model/device_info.c.o	19a0d71f46ed217d
+4	227	1720423525439003658	CMakeFiles/unisync_linux.dir/src/core/unisync-process.c.o	ad29df43ef448be4
+5	179	1720087024998131028	CMakeFiles/unisync_linux.dir/src/model/device-info.c.o	e82230c5062eb2ae
+7	337	1720087025157130231	CMakeFiles/unisync_linux.dir/src/model/device-message.c.o	4470f21e1f4559f
+9	320	1720087025140130317	CMakeFiles/unisync_linux.dir/src/utils/json-util.c.o	716313050bc5a8d
+4	76	1720087024896131539	CMakeFiles/unisync_linux.dir/src/core/mdns.c.o	7c8770962d256ad2
+4	215	1720423525428004258	CMakeFiles/unisync_linux.dir/src/utils/socket-util.c.o	e760ad9cced8902f
