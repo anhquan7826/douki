@@ -15,9 +15,8 @@ set(
     src/main.c
     src/core/mdns.c
     src/core/socket.c
-    src/core/unisync-process.c
-    src/dbus/dbus-iface-device.c
-    src/dbus/dbus-device.c
+    src/core/main-process.c
+    src/dbus/iface-credential.c
     src/model/device-info.c
     src/model/device-message.c
     src/utils/json-util.c

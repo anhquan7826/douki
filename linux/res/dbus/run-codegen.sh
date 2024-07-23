@@ -1,14 +1,14 @@
 gdbus-codegen \
-    --interface-prefix=com.anhquan.UnisyncDbus1 \
-    --c-namespace UnisyncDbus \
+    --interface-prefix=com.anhquan.DoukiDbus1 \
+    --c-namespace DoukiDbus \
     --header \
-    --output ../../include/dbus-iface-device.h \
+    --output ../../include/iface-credential.h \
     --pragma-once \
-    v1/com.anhquan.UnisyncDbus.Device.xml
+    v1/com.anhquan.DoukiDbus.Credential.xml
 
 gdbus-codegen \
     --interface-prefix=com.anhquan.UnisyncDbus1 \
     --c-namespace UnisyncDbus \
     --body \
-    --output ../../src/dbus/dbus-iface-device.c \
-    v1/com.anhquan.UnisyncDbus.Device.xml
+    --output ../../src/dbus/iface-credential.c \
+    v1/com.anhquan.DoukiDbus.Credential.xml

@@ -1,4 +1,5 @@
 #include "mdns.h"
+#include <gio/gio.h>
 
 static const char* name;
 static const char* type;

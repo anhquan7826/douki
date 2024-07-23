@@ -3,6 +3,7 @@
     "files.associations": {
         "glib-object.h": "c",
         "uuid.h": "c",
-        "unisync-process.h": "c"
+        "unisync-process.h": "c",
+        "string.h": "c"
     },
 }
