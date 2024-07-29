@@ -10,7 +10,7 @@
 #  include "config.h"
 #endif
 
-#include "iface-credential.h"
+#include "dbus-credential.h"
 
 #include <string.h>
 #ifdef G_OS_UNIX
@@ -286,21 +286,21 @@ _g_dbus_codegen_marshal_BOOLEAN__OBJECT_STRING (
 }
 
 /* ------------------------------------------------------------------------
- * Code for interface com.anhquan.DoukiDbus1.Credential
+ * Code for interface com.douki.Credential
  * ------------------------------------------------------------------------
  */
 
 /**
- * SECTION:UnisyncDbusComAnhquanDoukiDbus1Credential
- * @title: UnisyncDbusComAnhquanDoukiDbus1Credential
- * @short_description: Generated C code for the com.anhquan.DoukiDbus1.Credential D-Bus interface
+ * SECTION:DoukiCredential
+ * @title: DoukiCredential
+ * @short_description: Generated C code for the com.douki.Credential D-Bus interface
  *
- * This section contains code for working with the <link linkend="gdbus-interface-com-anhquan-DoukiDbus1-Credential.top_of_page">com.anhquan.DoukiDbus1.Credential</link> D-Bus interface in C.
+ * This section contains code for working with the <link linkend="gdbus-interface-com-douki-Credential.top_of_page">com.douki.Credential</link> D-Bus interface in C.
  */
 
-/* ---- Introspection data for com.anhquan.DoukiDbus1.Credential ---- */
+/* ---- Introspection data for com.douki.Credential ---- */
 
-static const _ExtendedGDBusArgInfo _unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_get_name_OUT_ARG_name =
+static const _ExtendedGDBusArgInfo _douki_credential_method_info_get_name_OUT_ARG_name =
 {
   {
     -1,
@@ -311,26 +311,26 @@ static const _ExtendedGDBusArgInfo _unisync_dbus_com_anhquan_douki_dbus1_credent
   FALSE
 };
 
-static const GDBusArgInfo * const _unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_get_name_OUT_ARG_pointers[] =
+static const GDBusArgInfo * const _douki_credential_method_info_get_name_OUT_ARG_pointers[] =
 {
-  &_unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_get_name_OUT_ARG_name.parent_struct,
+  &_douki_credential_method_info_get_name_OUT_ARG_name.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusMethodInfo _unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_get_name =
+static const _ExtendedGDBusMethodInfo _douki_credential_method_info_get_name =
 {
   {
     -1,
     (gchar *) "GetName",
     NULL,
-    (GDBusArgInfo **) &_unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_get_name_OUT_ARG_pointers,
+    (GDBusArgInfo **) &_douki_credential_method_info_get_name_OUT_ARG_pointers,
     NULL
   },
   "handle-get-name",
   FALSE
 };
 
-static const _ExtendedGDBusArgInfo _unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_set_name_IN_ARG_name =
+static const _ExtendedGDBusArgInfo _douki_credential_method_info_set_name_IN_ARG_name =
 {
   {
     -1,
@@ -341,13 +341,13 @@ static const _ExtendedGDBusArgInfo _unisync_dbus_com_anhquan_douki_dbus1_credent
   FALSE
 };
 
-static const GDBusArgInfo * const _unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_set_name_IN_ARG_pointers[] =
+static const GDBusArgInfo * const _douki_credential_method_info_set_name_IN_ARG_pointers[] =
 {
-  &_unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_set_name_IN_ARG_name.parent_struct,
+  &_douki_credential_method_info_set_name_IN_ARG_name.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusArgInfo _unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_set_name_OUT_ARG_result =
+static const _ExtendedGDBusArgInfo _douki_credential_method_info_set_name_OUT_ARG_result =
 {
   {
     -1,
@@ -358,26 +358,26 @@ static const _ExtendedGDBusArgInfo _unisync_dbus_com_anhquan_douki_dbus1_credent
   FALSE
 };
 
-static const GDBusArgInfo * const _unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_set_name_OUT_ARG_pointers[] =
+static const GDBusArgInfo * const _douki_credential_method_info_set_name_OUT_ARG_pointers[] =
 {
-  &_unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_set_name_OUT_ARG_result.parent_struct,
+  &_douki_credential_method_info_set_name_OUT_ARG_result.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusMethodInfo _unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_set_name =
+static const _ExtendedGDBusMethodInfo _douki_credential_method_info_set_name =
 {
   {
     -1,
     (gchar *) "SetName",
-    (GDBusArgInfo **) &_unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_set_name_IN_ARG_pointers,
-    (GDBusArgInfo **) &_unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_set_name_OUT_ARG_pointers,
+    (GDBusArgInfo **) &_douki_credential_method_info_set_name_IN_ARG_pointers,
+    (GDBusArgInfo **) &_douki_credential_method_info_set_name_OUT_ARG_pointers,
     NULL
   },
   "handle-set-name",
   FALSE
 };
 
-static const _ExtendedGDBusArgInfo _unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_get_password_OUT_ARG_password =
+static const _ExtendedGDBusArgInfo _douki_credential_method_info_get_password_OUT_ARG_password =
 {
   {
     -1,
@@ -388,26 +388,26 @@ static const _ExtendedGDBusArgInfo _unisync_dbus_com_anhquan_douki_dbus1_credent
   FALSE
 };
 
-static const GDBusArgInfo * const _unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_get_password_OUT_ARG_pointers[] =
+static const GDBusArgInfo * const _douki_credential_method_info_get_password_OUT_ARG_pointers[] =
 {
-  &_unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_get_password_OUT_ARG_password.parent_struct,
+  &_douki_credential_method_info_get_password_OUT_ARG_password.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusMethodInfo _unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_get_password =
+static const _ExtendedGDBusMethodInfo _douki_credential_method_info_get_password =
 {
   {
     -1,
     (gchar *) "GetPassword",
     NULL,
-    (GDBusArgInfo **) &_unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_get_password_OUT_ARG_pointers,
+    (GDBusArgInfo **) &_douki_credential_method_info_get_password_OUT_ARG_pointers,
     NULL
   },
   "handle-get-password",
   FALSE
 };
 
-static const _ExtendedGDBusArgInfo _unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_generate_password_OUT_ARG_password =
+static const _ExtendedGDBusArgInfo _douki_credential_method_info_generate_password_OUT_ARG_password =
 {
   {
     -1,
@@ -418,80 +418,80 @@ static const _ExtendedGDBusArgInfo _unisync_dbus_com_anhquan_douki_dbus1_credent
   FALSE
 };
 
-static const GDBusArgInfo * const _unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_generate_password_OUT_ARG_pointers[] =
+static const GDBusArgInfo * const _douki_credential_method_info_generate_password_OUT_ARG_pointers[] =
 {
-  &_unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_generate_password_OUT_ARG_password.parent_struct,
+  &_douki_credential_method_info_generate_password_OUT_ARG_password.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusMethodInfo _unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_generate_password =
+static const _ExtendedGDBusMethodInfo _douki_credential_method_info_generate_password =
 {
   {
     -1,
     (gchar *) "GeneratePassword",
     NULL,
-    (GDBusArgInfo **) &_unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_generate_password_OUT_ARG_pointers,
+    (GDBusArgInfo **) &_douki_credential_method_info_generate_password_OUT_ARG_pointers,
     NULL
   },
   "handle-generate-password",
   FALSE
 };
 
-static const GDBusMethodInfo * const _unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_pointers[] =
+static const GDBusMethodInfo * const _douki_credential_method_info_pointers[] =
 {
-  &_unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_get_name.parent_struct,
-  &_unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_set_name.parent_struct,
-  &_unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_get_password.parent_struct,
-  &_unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_generate_password.parent_struct,
+  &_douki_credential_method_info_get_name.parent_struct,
+  &_douki_credential_method_info_set_name.parent_struct,
+  &_douki_credential_method_info_get_password.parent_struct,
+  &_douki_credential_method_info_generate_password.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusInterfaceInfo _unisync_dbus_com_anhquan_douki_dbus1_credential_interface_info =
+static const _ExtendedGDBusInterfaceInfo _douki_credential_interface_info =
 {
   {
     -1,
-    (gchar *) "com.anhquan.DoukiDbus1.Credential",
-    (GDBusMethodInfo **) &_unisync_dbus_com_anhquan_douki_dbus1_credential_method_info_pointers,
+    (gchar *) "com.douki.Credential",
+    (GDBusMethodInfo **) &_douki_credential_method_info_pointers,
     NULL,
     NULL,
     NULL
   },
-  "com-anhquan-douki-dbus1-credential",
+  "credential",
 };
 
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_interface_info:
+ * douki_credential_interface_info:
  *
- * Gets a machine-readable description of the <link linkend="gdbus-interface-com-anhquan-DoukiDbus1-Credential.top_of_page">com.anhquan.DoukiDbus1.Credential</link> D-Bus interface.
+ * Gets a machine-readable description of the <link linkend="gdbus-interface-com-douki-Credential.top_of_page">com.douki.Credential</link> D-Bus interface.
  *
  * Returns: (transfer none): A #GDBusInterfaceInfo. Do not free.
  */
 GDBusInterfaceInfo *
-unisync_dbus_com_anhquan_douki_dbus1_credential_interface_info (void)
+douki_credential_interface_info (void)
 {
-  return (GDBusInterfaceInfo *) &_unisync_dbus_com_anhquan_douki_dbus1_credential_interface_info.parent_struct;
+  return (GDBusInterfaceInfo *) &_douki_credential_interface_info.parent_struct;
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_override_properties:
+ * douki_credential_override_properties:
  * @klass: The class structure for a #GObject derived class.
  * @property_id_begin: The property id to assign to the first overridden property.
  *
- * Overrides all #GObject properties in the #UnisyncDbusComAnhquanDoukiDbus1Credential interface for a concrete class.
+ * Overrides all #GObject properties in the #DoukiCredential interface for a concrete class.
  * The properties are overridden in the order they are defined.
  *
  * Returns: The last property id.
  */
 guint
-unisync_dbus_com_anhquan_douki_dbus1_credential_override_properties (GObjectClass *klass G_GNUC_UNUSED, guint property_id_begin)
+douki_credential_override_properties (GObjectClass *klass G_GNUC_UNUSED, guint property_id_begin)
 {
   return property_id_begin - 1;
 }
 
 
 inline static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_method_marshal_get_name (
+douki_credential_method_marshal_get_name (
     GClosure     *closure,
     GValue       *return_value,
     unsigned int  n_param_values,
@@ -504,7 +504,7 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_method_marshal_get_name (
 }
 
 inline static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_method_marshal_set_name (
+douki_credential_method_marshal_set_name (
     GClosure     *closure,
     GValue       *return_value,
     unsigned int  n_param_values,
@@ -517,7 +517,7 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_method_marshal_set_name (
 }
 
 inline static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_method_marshal_get_password (
+douki_credential_method_marshal_get_password (
     GClosure     *closure,
     GValue       *return_value,
     unsigned int  n_param_values,
@@ -530,7 +530,7 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_method_marshal_get_password (
 }
 
 inline static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_method_marshal_generate_password (
+douki_credential_method_marshal_generate_password (
     GClosure     *closure,
     GValue       *return_value,
     unsigned int  n_param_values,
@@ -544,114 +544,114 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_method_marshal_generate_password
 
 
 /**
- * UnisyncDbusComAnhquanDoukiDbus1Credential:
+ * DoukiCredential:
  *
- * Abstract interface type for the D-Bus interface <link linkend="gdbus-interface-com-anhquan-DoukiDbus1-Credential.top_of_page">com.anhquan.DoukiDbus1.Credential</link>.
+ * Abstract interface type for the D-Bus interface <link linkend="gdbus-interface-com-douki-Credential.top_of_page">com.douki.Credential</link>.
  */
 
 /**
- * UnisyncDbusComAnhquanDoukiDbus1CredentialIface:
+ * DoukiCredentialIface:
  * @parent_iface: The parent interface.
- * @handle_generate_password: Handler for the #UnisyncDbusComAnhquanDoukiDbus1Credential::handle-generate-password signal.
- * @handle_get_name: Handler for the #UnisyncDbusComAnhquanDoukiDbus1Credential::handle-get-name signal.
- * @handle_get_password: Handler for the #UnisyncDbusComAnhquanDoukiDbus1Credential::handle-get-password signal.
- * @handle_set_name: Handler for the #UnisyncDbusComAnhquanDoukiDbus1Credential::handle-set-name signal.
+ * @handle_generate_password: Handler for the #DoukiCredential::handle-generate-password signal.
+ * @handle_get_name: Handler for the #DoukiCredential::handle-get-name signal.
+ * @handle_get_password: Handler for the #DoukiCredential::handle-get-password signal.
+ * @handle_set_name: Handler for the #DoukiCredential::handle-set-name signal.
  *
- * Virtual table for the D-Bus interface <link linkend="gdbus-interface-com-anhquan-DoukiDbus1-Credential.top_of_page">com.anhquan.DoukiDbus1.Credential</link>.
+ * Virtual table for the D-Bus interface <link linkend="gdbus-interface-com-douki-Credential.top_of_page">com.douki.Credential</link>.
  */
 
-typedef UnisyncDbusComAnhquanDoukiDbus1CredentialIface UnisyncDbusComAnhquanDoukiDbus1CredentialInterface;
-G_DEFINE_INTERFACE (UnisyncDbusComAnhquanDoukiDbus1Credential, unisync_dbus_com_anhquan_douki_dbus1_credential, G_TYPE_OBJECT)
+typedef DoukiCredentialIface DoukiCredentialInterface;
+G_DEFINE_INTERFACE (DoukiCredential, douki_credential, G_TYPE_OBJECT)
 
 static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_default_init (UnisyncDbusComAnhquanDoukiDbus1CredentialIface *iface)
+douki_credential_default_init (DoukiCredentialIface *iface)
 {
   /* GObject signals for incoming D-Bus method calls: */
   /**
-   * UnisyncDbusComAnhquanDoukiDbus1Credential::handle-get-name:
-   * @object: A #UnisyncDbusComAnhquanDoukiDbus1Credential.
+   * DoukiCredential::handle-get-name:
+   * @object: A #DoukiCredential.
    * @invocation: A #GDBusMethodInvocation.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-com-anhquan-DoukiDbus1-Credential.GetName">GetName()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-com-douki-Credential.GetName">GetName()</link> D-Bus method.
    *
-   * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call unisync_dbus_com_anhquan_douki_dbus1_credential_complete_get_name() or e.g. g_dbus_method_invocation_return_error() on it) and no other signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
+   * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call douki_credential_complete_get_name() or e.g. g_dbus_method_invocation_return_error() on it) and no other signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
    * Returns: %G_DBUS_METHOD_INVOCATION_HANDLED or %TRUE if the invocation was handled, %G_DBUS_METHOD_INVOCATION_UNHANDLED or %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-get-name",
     G_TYPE_FROM_INTERFACE (iface),
     G_SIGNAL_RUN_LAST,
-    G_STRUCT_OFFSET (UnisyncDbusComAnhquanDoukiDbus1CredentialIface, handle_get_name),
+    G_STRUCT_OFFSET (DoukiCredentialIface, handle_get_name),
     g_signal_accumulator_true_handled,
     NULL,
-      unisync_dbus_com_anhquan_douki_dbus1_credential_method_marshal_get_name,
+      douki_credential_method_marshal_get_name,
     G_TYPE_BOOLEAN,
     1,
     G_TYPE_DBUS_METHOD_INVOCATION);
 
   /**
-   * UnisyncDbusComAnhquanDoukiDbus1Credential::handle-set-name:
-   * @object: A #UnisyncDbusComAnhquanDoukiDbus1Credential.
+   * DoukiCredential::handle-set-name:
+   * @object: A #DoukiCredential.
    * @invocation: A #GDBusMethodInvocation.
    * @arg_name: Argument passed by remote caller.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-com-anhquan-DoukiDbus1-Credential.SetName">SetName()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-com-douki-Credential.SetName">SetName()</link> D-Bus method.
    *
-   * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call unisync_dbus_com_anhquan_douki_dbus1_credential_complete_set_name() or e.g. g_dbus_method_invocation_return_error() on it) and no other signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
+   * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call douki_credential_complete_set_name() or e.g. g_dbus_method_invocation_return_error() on it) and no other signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
    * Returns: %G_DBUS_METHOD_INVOCATION_HANDLED or %TRUE if the invocation was handled, %G_DBUS_METHOD_INVOCATION_UNHANDLED or %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-set-name",
     G_TYPE_FROM_INTERFACE (iface),
     G_SIGNAL_RUN_LAST,
-    G_STRUCT_OFFSET (UnisyncDbusComAnhquanDoukiDbus1CredentialIface, handle_set_name),
+    G_STRUCT_OFFSET (DoukiCredentialIface, handle_set_name),
     g_signal_accumulator_true_handled,
     NULL,
-      unisync_dbus_com_anhquan_douki_dbus1_credential_method_marshal_set_name,
+      douki_credential_method_marshal_set_name,
     G_TYPE_BOOLEAN,
     2,
     G_TYPE_DBUS_METHOD_INVOCATION, G_TYPE_STRING);
 
   /**
-   * UnisyncDbusComAnhquanDoukiDbus1Credential::handle-get-password:
-   * @object: A #UnisyncDbusComAnhquanDoukiDbus1Credential.
+   * DoukiCredential::handle-get-password:
+   * @object: A #DoukiCredential.
    * @invocation: A #GDBusMethodInvocation.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-com-anhquan-DoukiDbus1-Credential.GetPassword">GetPassword()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-com-douki-Credential.GetPassword">GetPassword()</link> D-Bus method.
    *
-   * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call unisync_dbus_com_anhquan_douki_dbus1_credential_complete_get_password() or e.g. g_dbus_method_invocation_return_error() on it) and no other signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
+   * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call douki_credential_complete_get_password() or e.g. g_dbus_method_invocation_return_error() on it) and no other signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
    * Returns: %G_DBUS_METHOD_INVOCATION_HANDLED or %TRUE if the invocation was handled, %G_DBUS_METHOD_INVOCATION_UNHANDLED or %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-get-password",
     G_TYPE_FROM_INTERFACE (iface),
     G_SIGNAL_RUN_LAST,
-    G_STRUCT_OFFSET (UnisyncDbusComAnhquanDoukiDbus1CredentialIface, handle_get_password),
+    G_STRUCT_OFFSET (DoukiCredentialIface, handle_get_password),
     g_signal_accumulator_true_handled,
     NULL,
-      unisync_dbus_com_anhquan_douki_dbus1_credential_method_marshal_get_password,
+      douki_credential_method_marshal_get_password,
     G_TYPE_BOOLEAN,
     1,
     G_TYPE_DBUS_METHOD_INVOCATION);
 
   /**
-   * UnisyncDbusComAnhquanDoukiDbus1Credential::handle-generate-password:
-   * @object: A #UnisyncDbusComAnhquanDoukiDbus1Credential.
+   * DoukiCredential::handle-generate-password:
+   * @object: A #DoukiCredential.
    * @invocation: A #GDBusMethodInvocation.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-com-anhquan-DoukiDbus1-Credential.GeneratePassword">GeneratePassword()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-com-douki-Credential.GeneratePassword">GeneratePassword()</link> D-Bus method.
    *
-   * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call unisync_dbus_com_anhquan_douki_dbus1_credential_complete_generate_password() or e.g. g_dbus_method_invocation_return_error() on it) and no other signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
+   * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call douki_credential_complete_generate_password() or e.g. g_dbus_method_invocation_return_error() on it) and no other signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
    * Returns: %G_DBUS_METHOD_INVOCATION_HANDLED or %TRUE if the invocation was handled, %G_DBUS_METHOD_INVOCATION_UNHANDLED or %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-generate-password",
     G_TYPE_FROM_INTERFACE (iface),
     G_SIGNAL_RUN_LAST,
-    G_STRUCT_OFFSET (UnisyncDbusComAnhquanDoukiDbus1CredentialIface, handle_generate_password),
+    G_STRUCT_OFFSET (DoukiCredentialIface, handle_generate_password),
     g_signal_accumulator_true_handled,
     NULL,
-      unisync_dbus_com_anhquan_douki_dbus1_credential_method_marshal_generate_password,
+      douki_credential_method_marshal_generate_password,
     G_TYPE_BOOLEAN,
     1,
     G_TYPE_DBUS_METHOD_INVOCATION);
@@ -659,21 +659,21 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_default_init (UnisyncDbusComAnhq
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_name:
- * @proxy: A #UnisyncDbusComAnhquanDoukiDbus1CredentialProxy.
+ * douki_credential_call_get_name:
+ * @proxy: A #DoukiCredentialProxy.
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-com-anhquan-DoukiDbus1-Credential.GetName">GetName()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-com-douki-Credential.GetName">GetName()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the thread-default main loop of the thread you are calling this method from (see g_main_context_push_thread_default()).
- * You can then call unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_name_finish() to get the result of the operation.
+ * You can then call douki_credential_call_get_name_finish() to get the result of the operation.
  *
- * See unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_name_sync() for the synchronous, blocking version of this method.
+ * See douki_credential_call_get_name_sync() for the synchronous, blocking version of this method.
  */
 void
-unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_name (
-    UnisyncDbusComAnhquanDoukiDbus1Credential *proxy,
+douki_credential_call_get_name (
+    DoukiCredential *proxy,
     GCancellable *cancellable,
     GAsyncReadyCallback callback,
     gpointer user_data)
@@ -689,19 +689,19 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_name (
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_name_finish:
- * @proxy: A #UnisyncDbusComAnhquanDoukiDbus1CredentialProxy.
+ * douki_credential_call_get_name_finish:
+ * @proxy: A #DoukiCredentialProxy.
  * @out_name: (out) (optional): Return location for return parameter or %NULL to ignore.
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_name().
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to douki_credential_call_get_name().
  * @error: Return location for error or %NULL.
  *
- * Finishes an operation started with unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_name().
+ * Finishes an operation started with douki_credential_call_get_name().
  *
  * Returns: (skip): %TRUE if the call succeeded, %FALSE if @error is set.
  */
 gboolean
-unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_name_finish (
-    UnisyncDbusComAnhquanDoukiDbus1Credential *proxy,
+douki_credential_call_get_name_finish (
+    DoukiCredential *proxy,
     gchar **out_name,
     GAsyncResult *res,
     GError **error)
@@ -719,21 +719,21 @@ _out:
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_name_sync:
- * @proxy: A #UnisyncDbusComAnhquanDoukiDbus1CredentialProxy.
+ * douki_credential_call_get_name_sync:
+ * @proxy: A #DoukiCredentialProxy.
  * @out_name: (out) (optional): Return location for return parameter or %NULL to ignore.
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-com-anhquan-DoukiDbus1-Credential.GetName">GetName()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-com-douki-Credential.GetName">GetName()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
- * See unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_name() for the asynchronous version of this method.
+ * See douki_credential_call_get_name() for the asynchronous version of this method.
  *
  * Returns: (skip): %TRUE if the call succeeded, %FALSE if @error is set.
  */
 gboolean
-unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_name_sync (
-    UnisyncDbusComAnhquanDoukiDbus1Credential *proxy,
+douki_credential_call_get_name_sync (
+    DoukiCredential *proxy,
     gchar **out_name,
     GCancellable *cancellable,
     GError **error)
@@ -757,22 +757,22 @@ _out:
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_call_set_name:
- * @proxy: A #UnisyncDbusComAnhquanDoukiDbus1CredentialProxy.
+ * douki_credential_call_set_name:
+ * @proxy: A #DoukiCredentialProxy.
  * @arg_name: Argument to pass with the method invocation.
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-com-anhquan-DoukiDbus1-Credential.SetName">SetName()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-com-douki-Credential.SetName">SetName()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the thread-default main loop of the thread you are calling this method from (see g_main_context_push_thread_default()).
- * You can then call unisync_dbus_com_anhquan_douki_dbus1_credential_call_set_name_finish() to get the result of the operation.
+ * You can then call douki_credential_call_set_name_finish() to get the result of the operation.
  *
- * See unisync_dbus_com_anhquan_douki_dbus1_credential_call_set_name_sync() for the synchronous, blocking version of this method.
+ * See douki_credential_call_set_name_sync() for the synchronous, blocking version of this method.
  */
 void
-unisync_dbus_com_anhquan_douki_dbus1_credential_call_set_name (
-    UnisyncDbusComAnhquanDoukiDbus1Credential *proxy,
+douki_credential_call_set_name (
+    DoukiCredential *proxy,
     const gchar *arg_name,
     GCancellable *cancellable,
     GAsyncReadyCallback callback,
@@ -790,19 +790,19 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_call_set_name (
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_call_set_name_finish:
- * @proxy: A #UnisyncDbusComAnhquanDoukiDbus1CredentialProxy.
+ * douki_credential_call_set_name_finish:
+ * @proxy: A #DoukiCredentialProxy.
  * @out_result: (out) (optional): Return location for return parameter or %NULL to ignore.
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to unisync_dbus_com_anhquan_douki_dbus1_credential_call_set_name().
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to douki_credential_call_set_name().
  * @error: Return location for error or %NULL.
  *
- * Finishes an operation started with unisync_dbus_com_anhquan_douki_dbus1_credential_call_set_name().
+ * Finishes an operation started with douki_credential_call_set_name().
  *
  * Returns: (skip): %TRUE if the call succeeded, %FALSE if @error is set.
  */
 gboolean
-unisync_dbus_com_anhquan_douki_dbus1_credential_call_set_name_finish (
-    UnisyncDbusComAnhquanDoukiDbus1Credential *proxy,
+douki_credential_call_set_name_finish (
+    DoukiCredential *proxy,
     gboolean *out_result,
     GAsyncResult *res,
     GError **error)
@@ -820,22 +820,22 @@ _out:
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_call_set_name_sync:
- * @proxy: A #UnisyncDbusComAnhquanDoukiDbus1CredentialProxy.
+ * douki_credential_call_set_name_sync:
+ * @proxy: A #DoukiCredentialProxy.
  * @arg_name: Argument to pass with the method invocation.
  * @out_result: (out) (optional): Return location for return parameter or %NULL to ignore.
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-com-anhquan-DoukiDbus1-Credential.SetName">SetName()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-com-douki-Credential.SetName">SetName()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
- * See unisync_dbus_com_anhquan_douki_dbus1_credential_call_set_name() for the asynchronous version of this method.
+ * See douki_credential_call_set_name() for the asynchronous version of this method.
  *
  * Returns: (skip): %TRUE if the call succeeded, %FALSE if @error is set.
  */
 gboolean
-unisync_dbus_com_anhquan_douki_dbus1_credential_call_set_name_sync (
-    UnisyncDbusComAnhquanDoukiDbus1Credential *proxy,
+douki_credential_call_set_name_sync (
+    DoukiCredential *proxy,
     const gchar *arg_name,
     gboolean *out_result,
     GCancellable *cancellable,
@@ -861,21 +861,21 @@ _out:
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_password:
- * @proxy: A #UnisyncDbusComAnhquanDoukiDbus1CredentialProxy.
+ * douki_credential_call_get_password:
+ * @proxy: A #DoukiCredentialProxy.
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-com-anhquan-DoukiDbus1-Credential.GetPassword">GetPassword()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-com-douki-Credential.GetPassword">GetPassword()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the thread-default main loop of the thread you are calling this method from (see g_main_context_push_thread_default()).
- * You can then call unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_password_finish() to get the result of the operation.
+ * You can then call douki_credential_call_get_password_finish() to get the result of the operation.
  *
- * See unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_password_sync() for the synchronous, blocking version of this method.
+ * See douki_credential_call_get_password_sync() for the synchronous, blocking version of this method.
  */
 void
-unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_password (
-    UnisyncDbusComAnhquanDoukiDbus1Credential *proxy,
+douki_credential_call_get_password (
+    DoukiCredential *proxy,
     GCancellable *cancellable,
     GAsyncReadyCallback callback,
     gpointer user_data)
@@ -891,19 +891,19 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_password (
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_password_finish:
- * @proxy: A #UnisyncDbusComAnhquanDoukiDbus1CredentialProxy.
+ * douki_credential_call_get_password_finish:
+ * @proxy: A #DoukiCredentialProxy.
  * @out_password: (out) (optional): Return location for return parameter or %NULL to ignore.
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_password().
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to douki_credential_call_get_password().
  * @error: Return location for error or %NULL.
  *
- * Finishes an operation started with unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_password().
+ * Finishes an operation started with douki_credential_call_get_password().
  *
  * Returns: (skip): %TRUE if the call succeeded, %FALSE if @error is set.
  */
 gboolean
-unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_password_finish (
-    UnisyncDbusComAnhquanDoukiDbus1Credential *proxy,
+douki_credential_call_get_password_finish (
+    DoukiCredential *proxy,
     gchar **out_password,
     GAsyncResult *res,
     GError **error)
@@ -921,21 +921,21 @@ _out:
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_password_sync:
- * @proxy: A #UnisyncDbusComAnhquanDoukiDbus1CredentialProxy.
+ * douki_credential_call_get_password_sync:
+ * @proxy: A #DoukiCredentialProxy.
  * @out_password: (out) (optional): Return location for return parameter or %NULL to ignore.
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-com-anhquan-DoukiDbus1-Credential.GetPassword">GetPassword()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-com-douki-Credential.GetPassword">GetPassword()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
- * See unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_password() for the asynchronous version of this method.
+ * See douki_credential_call_get_password() for the asynchronous version of this method.
  *
  * Returns: (skip): %TRUE if the call succeeded, %FALSE if @error is set.
  */
 gboolean
-unisync_dbus_com_anhquan_douki_dbus1_credential_call_get_password_sync (
-    UnisyncDbusComAnhquanDoukiDbus1Credential *proxy,
+douki_credential_call_get_password_sync (
+    DoukiCredential *proxy,
     gchar **out_password,
     GCancellable *cancellable,
     GError **error)
@@ -959,21 +959,21 @@ _out:
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_call_generate_password:
- * @proxy: A #UnisyncDbusComAnhquanDoukiDbus1CredentialProxy.
+ * douki_credential_call_generate_password:
+ * @proxy: A #DoukiCredentialProxy.
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-com-anhquan-DoukiDbus1-Credential.GeneratePassword">GeneratePassword()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-com-douki-Credential.GeneratePassword">GeneratePassword()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the thread-default main loop of the thread you are calling this method from (see g_main_context_push_thread_default()).
- * You can then call unisync_dbus_com_anhquan_douki_dbus1_credential_call_generate_password_finish() to get the result of the operation.
+ * You can then call douki_credential_call_generate_password_finish() to get the result of the operation.
  *
- * See unisync_dbus_com_anhquan_douki_dbus1_credential_call_generate_password_sync() for the synchronous, blocking version of this method.
+ * See douki_credential_call_generate_password_sync() for the synchronous, blocking version of this method.
  */
 void
-unisync_dbus_com_anhquan_douki_dbus1_credential_call_generate_password (
-    UnisyncDbusComAnhquanDoukiDbus1Credential *proxy,
+douki_credential_call_generate_password (
+    DoukiCredential *proxy,
     GCancellable *cancellable,
     GAsyncReadyCallback callback,
     gpointer user_data)
@@ -989,19 +989,19 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_call_generate_password (
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_call_generate_password_finish:
- * @proxy: A #UnisyncDbusComAnhquanDoukiDbus1CredentialProxy.
+ * douki_credential_call_generate_password_finish:
+ * @proxy: A #DoukiCredentialProxy.
  * @out_password: (out) (optional): Return location for return parameter or %NULL to ignore.
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to unisync_dbus_com_anhquan_douki_dbus1_credential_call_generate_password().
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to douki_credential_call_generate_password().
  * @error: Return location for error or %NULL.
  *
- * Finishes an operation started with unisync_dbus_com_anhquan_douki_dbus1_credential_call_generate_password().
+ * Finishes an operation started with douki_credential_call_generate_password().
  *
  * Returns: (skip): %TRUE if the call succeeded, %FALSE if @error is set.
  */
 gboolean
-unisync_dbus_com_anhquan_douki_dbus1_credential_call_generate_password_finish (
-    UnisyncDbusComAnhquanDoukiDbus1Credential *proxy,
+douki_credential_call_generate_password_finish (
+    DoukiCredential *proxy,
     gchar **out_password,
     GAsyncResult *res,
     GError **error)
@@ -1019,21 +1019,21 @@ _out:
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_call_generate_password_sync:
- * @proxy: A #UnisyncDbusComAnhquanDoukiDbus1CredentialProxy.
+ * douki_credential_call_generate_password_sync:
+ * @proxy: A #DoukiCredentialProxy.
  * @out_password: (out) (optional): Return location for return parameter or %NULL to ignore.
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-com-anhquan-DoukiDbus1-Credential.GeneratePassword">GeneratePassword()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-com-douki-Credential.GeneratePassword">GeneratePassword()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
- * See unisync_dbus_com_anhquan_douki_dbus1_credential_call_generate_password() for the asynchronous version of this method.
+ * See douki_credential_call_generate_password() for the asynchronous version of this method.
  *
  * Returns: (skip): %TRUE if the call succeeded, %FALSE if @error is set.
  */
 gboolean
-unisync_dbus_com_anhquan_douki_dbus1_credential_call_generate_password_sync (
-    UnisyncDbusComAnhquanDoukiDbus1Credential *proxy,
+douki_credential_call_generate_password_sync (
+    DoukiCredential *proxy,
     gchar **out_password,
     GCancellable *cancellable,
     GError **error)
@@ -1057,18 +1057,18 @@ _out:
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_complete_get_name:
- * @object: A #UnisyncDbusComAnhquanDoukiDbus1Credential.
+ * douki_credential_complete_get_name:
+ * @object: A #DoukiCredential.
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  * @name: Parameter to return.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-com-anhquan-DoukiDbus1-Credential.GetName">GetName()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-com-douki-Credential.GetName">GetName()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
 void
-unisync_dbus_com_anhquan_douki_dbus1_credential_complete_get_name (
-    UnisyncDbusComAnhquanDoukiDbus1Credential *object G_GNUC_UNUSED,
+douki_credential_complete_get_name (
+    DoukiCredential *object G_GNUC_UNUSED,
     GDBusMethodInvocation *invocation,
     const gchar *name)
 {
@@ -1078,18 +1078,18 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_complete_get_name (
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_complete_set_name:
- * @object: A #UnisyncDbusComAnhquanDoukiDbus1Credential.
+ * douki_credential_complete_set_name:
+ * @object: A #DoukiCredential.
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  * @result: Parameter to return.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-com-anhquan-DoukiDbus1-Credential.SetName">SetName()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-com-douki-Credential.SetName">SetName()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
 void
-unisync_dbus_com_anhquan_douki_dbus1_credential_complete_set_name (
-    UnisyncDbusComAnhquanDoukiDbus1Credential *object G_GNUC_UNUSED,
+douki_credential_complete_set_name (
+    DoukiCredential *object G_GNUC_UNUSED,
     GDBusMethodInvocation *invocation,
     gboolean result)
 {
@@ -1099,18 +1099,18 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_complete_set_name (
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_complete_get_password:
- * @object: A #UnisyncDbusComAnhquanDoukiDbus1Credential.
+ * douki_credential_complete_get_password:
+ * @object: A #DoukiCredential.
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  * @password: Parameter to return.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-com-anhquan-DoukiDbus1-Credential.GetPassword">GetPassword()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-com-douki-Credential.GetPassword">GetPassword()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
 void
-unisync_dbus_com_anhquan_douki_dbus1_credential_complete_get_password (
-    UnisyncDbusComAnhquanDoukiDbus1Credential *object G_GNUC_UNUSED,
+douki_credential_complete_get_password (
+    DoukiCredential *object G_GNUC_UNUSED,
     GDBusMethodInvocation *invocation,
     const gchar *password)
 {
@@ -1120,18 +1120,18 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_complete_get_password (
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_complete_generate_password:
- * @object: A #UnisyncDbusComAnhquanDoukiDbus1Credential.
+ * douki_credential_complete_generate_password:
+ * @object: A #DoukiCredential.
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  * @password: Parameter to return.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-com-anhquan-DoukiDbus1-Credential.GeneratePassword">GeneratePassword()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-com-douki-Credential.GeneratePassword">GeneratePassword()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
 void
-unisync_dbus_com_anhquan_douki_dbus1_credential_complete_generate_password (
-    UnisyncDbusComAnhquanDoukiDbus1Credential *object G_GNUC_UNUSED,
+douki_credential_complete_generate_password (
+    DoukiCredential *object G_GNUC_UNUSED,
     GDBusMethodInvocation *invocation,
     const gchar *password)
 {
@@ -1143,45 +1143,45 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_complete_generate_password (
 /* ------------------------------------------------------------------------ */
 
 /**
- * UnisyncDbusComAnhquanDoukiDbus1CredentialProxy:
+ * DoukiCredentialProxy:
  *
- * The #UnisyncDbusComAnhquanDoukiDbus1CredentialProxy structure contains only private data and should only be accessed using the provided API.
+ * The #DoukiCredentialProxy structure contains only private data and should only be accessed using the provided API.
  */
 
 /**
- * UnisyncDbusComAnhquanDoukiDbus1CredentialProxyClass:
+ * DoukiCredentialProxyClass:
  * @parent_class: The parent class.
  *
- * Class structure for #UnisyncDbusComAnhquanDoukiDbus1CredentialProxy.
+ * Class structure for #DoukiCredentialProxy.
  */
 
-struct _UnisyncDbusComAnhquanDoukiDbus1CredentialProxyPrivate
+struct _DoukiCredentialProxyPrivate
 {
   GData *qdata;
 };
 
-static void unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_iface_init (UnisyncDbusComAnhquanDoukiDbus1CredentialIface *iface);
+static void douki_credential_proxy_iface_init (DoukiCredentialIface *iface);
 
 #if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_38
-G_DEFINE_TYPE_WITH_CODE (UnisyncDbusComAnhquanDoukiDbus1CredentialProxy, unisync_dbus_com_anhquan_douki_dbus1_credential_proxy, G_TYPE_DBUS_PROXY,
-                         G_ADD_PRIVATE (UnisyncDbusComAnhquanDoukiDbus1CredentialProxy)
-                         G_IMPLEMENT_INTERFACE (UNISYNC_DBUS_TYPE_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL, unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_iface_init))
+G_DEFINE_TYPE_WITH_CODE (DoukiCredentialProxy, douki_credential_proxy, G_TYPE_DBUS_PROXY,
+                         G_ADD_PRIVATE (DoukiCredentialProxy)
+                         G_IMPLEMENT_INTERFACE (DOUKI_TYPE_CREDENTIAL, douki_credential_proxy_iface_init))
 
 #else
-G_DEFINE_TYPE_WITH_CODE (UnisyncDbusComAnhquanDoukiDbus1CredentialProxy, unisync_dbus_com_anhquan_douki_dbus1_credential_proxy, G_TYPE_DBUS_PROXY,
-                         G_IMPLEMENT_INTERFACE (UNISYNC_DBUS_TYPE_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL, unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_iface_init))
+G_DEFINE_TYPE_WITH_CODE (DoukiCredentialProxy, douki_credential_proxy, G_TYPE_DBUS_PROXY,
+                         G_IMPLEMENT_INTERFACE (DOUKI_TYPE_CREDENTIAL, douki_credential_proxy_iface_init))
 
 #endif
 static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_finalize (GObject *object)
+douki_credential_proxy_finalize (GObject *object)
 {
-  UnisyncDbusComAnhquanDoukiDbus1CredentialProxy *proxy = UNISYNC_DBUS_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL_PROXY (object);
+  DoukiCredentialProxy *proxy = DOUKI_CREDENTIAL_PROXY (object);
   g_datalist_clear (&proxy->priv->qdata);
-  G_OBJECT_CLASS (unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_parent_class)->finalize (object);
+  G_OBJECT_CLASS (douki_credential_proxy_parent_class)->finalize (object);
 }
 
 static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_get_property (GObject      *object G_GNUC_UNUSED,
+douki_credential_proxy_get_property (GObject      *object G_GNUC_UNUSED,
   guint         prop_id G_GNUC_UNUSED,
   GValue       *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
@@ -1189,7 +1189,7 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_get_property (GObject     
 }
 
 static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_set_property (GObject      *object G_GNUC_UNUSED,
+douki_credential_proxy_set_property (GObject      *object G_GNUC_UNUSED,
   guint         prop_id G_GNUC_UNUSED,
   const GValue *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
@@ -1197,7 +1197,7 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_set_property (GObject     
 }
 
 static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_g_signal (GDBusProxy *proxy,
+douki_credential_proxy_g_signal (GDBusProxy *proxy,
   const gchar *sender_name G_GNUC_UNUSED,
   const gchar *signal_name,
   GVariant *parameters)
@@ -1209,12 +1209,12 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_g_signal (GDBusProxy *prox
   gsize num_params;
   gsize n;
   guint signal_id;
-  info = (_ExtendedGDBusSignalInfo *) g_dbus_interface_info_lookup_signal ((GDBusInterfaceInfo *) &_unisync_dbus_com_anhquan_douki_dbus1_credential_interface_info.parent_struct, signal_name);
+  info = (_ExtendedGDBusSignalInfo *) g_dbus_interface_info_lookup_signal ((GDBusInterfaceInfo *) &_douki_credential_interface_info.parent_struct, signal_name);
   if (info == NULL)
     return;
   num_params = g_variant_n_children (parameters);
   paramv = g_new0 (GValue, num_params + 1);
-  g_value_init (&paramv[0], UNISYNC_DBUS_TYPE_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL);
+  g_value_init (&paramv[0], DOUKI_TYPE_CREDENTIAL);
   g_value_set_object (&paramv[0], proxy);
   g_variant_iter_init (&iter, parameters);
   n = 1;
@@ -1231,7 +1231,7 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_g_signal (GDBusProxy *prox
         g_dbus_gvariant_to_gvalue (child, &paramv[n++]);
       g_variant_unref (child);
     }
-  signal_id = g_signal_lookup (info->signal_name, UNISYNC_DBUS_TYPE_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL);
+  signal_id = g_signal_lookup (info->signal_name, DOUKI_TYPE_CREDENTIAL);
   g_signal_emitv (paramv, signal_id, 0, NULL);
   for (n = 0; n < num_params + 1; n++)
     g_value_unset (&paramv[n]);
@@ -1239,11 +1239,11 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_g_signal (GDBusProxy *prox
 }
 
 static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_g_properties_changed (GDBusProxy *_proxy,
+douki_credential_proxy_g_properties_changed (GDBusProxy *_proxy,
   GVariant *changed_properties,
   const gchar *const *invalidated_properties)
 {
-  UnisyncDbusComAnhquanDoukiDbus1CredentialProxy *proxy = UNISYNC_DBUS_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL_PROXY (_proxy);
+  DoukiCredentialProxy *proxy = DOUKI_CREDENTIAL_PROXY (_proxy);
   guint n;
   const gchar *key;
   GVariantIter *iter;
@@ -1251,7 +1251,7 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_g_properties_changed (GDBu
   g_variant_get (changed_properties, "a{sv}", &iter);
   while (g_variant_iter_next (iter, "{&sv}", &key, NULL))
     {
-      info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_unisync_dbus_com_anhquan_douki_dbus1_credential_interface_info.parent_struct, key);
+      info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_douki_credential_interface_info.parent_struct, key);
       g_datalist_remove_data (&proxy->priv->qdata, key);
       if (info != NULL)
         g_object_notify (G_OBJECT (proxy), info->hyphen_name);
@@ -1259,7 +1259,7 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_g_properties_changed (GDBu
   g_variant_iter_free (iter);
   for (n = 0; invalidated_properties[n] != NULL; n++)
     {
-      info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_unisync_dbus_com_anhquan_douki_dbus1_credential_interface_info.parent_struct, invalidated_properties[n]);
+      info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_douki_credential_interface_info.parent_struct, invalidated_properties[n]);
       g_datalist_remove_data (&proxy->priv->qdata, invalidated_properties[n]);
       if (info != NULL)
         g_object_notify (G_OBJECT (proxy), info->hyphen_name);
@@ -1267,44 +1267,44 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_g_properties_changed (GDBu
 }
 
 static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_init (UnisyncDbusComAnhquanDoukiDbus1CredentialProxy *proxy)
+douki_credential_proxy_init (DoukiCredentialProxy *proxy)
 {
 #if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_38
-  proxy->priv = unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_get_instance_private (proxy);
+  proxy->priv = douki_credential_proxy_get_instance_private (proxy);
 #else
-  proxy->priv = G_TYPE_INSTANCE_GET_PRIVATE (proxy, UNISYNC_DBUS_TYPE_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL_PROXY, UnisyncDbusComAnhquanDoukiDbus1CredentialProxyPrivate);
+  proxy->priv = G_TYPE_INSTANCE_GET_PRIVATE (proxy, DOUKI_TYPE_CREDENTIAL_PROXY, DoukiCredentialProxyPrivate);
 #endif
 
-  g_dbus_proxy_set_interface_info (G_DBUS_PROXY (proxy), unisync_dbus_com_anhquan_douki_dbus1_credential_interface_info ());
+  g_dbus_proxy_set_interface_info (G_DBUS_PROXY (proxy), douki_credential_interface_info ());
 }
 
 static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_class_init (UnisyncDbusComAnhquanDoukiDbus1CredentialProxyClass *klass)
+douki_credential_proxy_class_init (DoukiCredentialProxyClass *klass)
 {
   GObjectClass *gobject_class;
   GDBusProxyClass *proxy_class;
 
   gobject_class = G_OBJECT_CLASS (klass);
-  gobject_class->finalize     = unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_finalize;
-  gobject_class->get_property = unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_get_property;
-  gobject_class->set_property = unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_set_property;
+  gobject_class->finalize     = douki_credential_proxy_finalize;
+  gobject_class->get_property = douki_credential_proxy_get_property;
+  gobject_class->set_property = douki_credential_proxy_set_property;
 
   proxy_class = G_DBUS_PROXY_CLASS (klass);
-  proxy_class->g_signal = unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_g_signal;
-  proxy_class->g_properties_changed = unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_g_properties_changed;
+  proxy_class->g_signal = douki_credential_proxy_g_signal;
+  proxy_class->g_properties_changed = douki_credential_proxy_g_properties_changed;
 
 #if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_38
-  g_type_class_add_private (klass, sizeof (UnisyncDbusComAnhquanDoukiDbus1CredentialProxyPrivate));
+  g_type_class_add_private (klass, sizeof (DoukiCredentialProxyPrivate));
 #endif
 }
 
 static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_iface_init (UnisyncDbusComAnhquanDoukiDbus1CredentialIface *iface G_GNUC_UNUSED)
+douki_credential_proxy_iface_init (DoukiCredentialIface *iface G_GNUC_UNUSED)
 {
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new:
+ * douki_credential_proxy_new:
  * @connection: A #GDBusConnection.
  * @flags: Flags from the #GDBusProxyFlags enumeration.
  * @name: (nullable): A bus name (well-known or unique) or %NULL if @connection is not a message bus connection.
@@ -1313,15 +1313,15 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_iface_init (UnisyncDbusCom
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-com-anhquan-DoukiDbus1-Credential.top_of_page">com.anhquan.DoukiDbus1.Credential</link>. See g_dbus_proxy_new() for more details.
+ * Asynchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-com-douki-Credential.top_of_page">com.douki.Credential</link>. See g_dbus_proxy_new() for more details.
  *
  * When the operation is finished, @callback will be invoked in the thread-default main loop of the thread you are calling this method from (see g_main_context_push_thread_default()).
- * You can then call unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_finish() to get the result of the operation.
+ * You can then call douki_credential_proxy_new_finish() to get the result of the operation.
  *
- * See unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_sync() for the synchronous, blocking version of this constructor.
+ * See douki_credential_proxy_new_sync() for the synchronous, blocking version of this constructor.
  */
 void
-unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new (
+douki_credential_proxy_new (
     GDBusConnection     *connection,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1330,20 +1330,20 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new (
     GAsyncReadyCallback  callback,
     gpointer             user_data)
 {
-  g_async_initable_new_async (UNISYNC_DBUS_TYPE_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "com.anhquan.DoukiDbus1.Credential", NULL);
+  g_async_initable_new_async (DOUKI_TYPE_CREDENTIAL_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "com.douki.Credential", NULL);
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_finish:
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new().
+ * douki_credential_proxy_new_finish:
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to douki_credential_proxy_new().
  * @error: Return location for error or %NULL
  *
- * Finishes an operation started with unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new().
+ * Finishes an operation started with douki_credential_proxy_new().
  *
- * Returns: (transfer full) (type UnisyncDbusComAnhquanDoukiDbus1CredentialProxy): The constructed proxy object or %NULL if @error is set.
+ * Returns: (transfer full) (type DoukiCredentialProxy): The constructed proxy object or %NULL if @error is set.
  */
-UnisyncDbusComAnhquanDoukiDbus1Credential *
-unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_finish (
+DoukiCredential *
+douki_credential_proxy_new_finish (
     GAsyncResult        *res,
     GError             **error)
 {
@@ -1353,13 +1353,13 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_finish (
   ret = g_async_initable_new_finish (G_ASYNC_INITABLE (source_object), res, error);
   g_object_unref (source_object);
   if (ret != NULL)
-    return UNISYNC_DBUS_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL (ret);
+    return DOUKI_CREDENTIAL (ret);
   else
     return NULL;
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_sync:
+ * douki_credential_proxy_new_sync:
  * @connection: A #GDBusConnection.
  * @flags: Flags from the #GDBusProxyFlags enumeration.
  * @name: (nullable): A bus name (well-known or unique) or %NULL if @connection is not a message bus connection.
@@ -1367,16 +1367,16 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_finish (
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL
  *
- * Synchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-com-anhquan-DoukiDbus1-Credential.top_of_page">com.anhquan.DoukiDbus1.Credential</link>. See g_dbus_proxy_new_sync() for more details.
+ * Synchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-com-douki-Credential.top_of_page">com.douki.Credential</link>. See g_dbus_proxy_new_sync() for more details.
  *
  * The calling thread is blocked until a reply is received.
  *
- * See unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new() for the asynchronous version of this constructor.
+ * See douki_credential_proxy_new() for the asynchronous version of this constructor.
  *
- * Returns: (transfer full) (type UnisyncDbusComAnhquanDoukiDbus1CredentialProxy): The constructed proxy object or %NULL if @error is set.
+ * Returns: (transfer full) (type DoukiCredentialProxy): The constructed proxy object or %NULL if @error is set.
  */
-UnisyncDbusComAnhquanDoukiDbus1Credential *
-unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_sync (
+DoukiCredential *
+douki_credential_proxy_new_sync (
     GDBusConnection     *connection,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1385,16 +1385,16 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_sync (
     GError             **error)
 {
   GInitable *ret;
-  ret = g_initable_new (UNISYNC_DBUS_TYPE_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "com.anhquan.DoukiDbus1.Credential", NULL);
+  ret = g_initable_new (DOUKI_TYPE_CREDENTIAL_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "com.douki.Credential", NULL);
   if (ret != NULL)
-    return UNISYNC_DBUS_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL (ret);
+    return DOUKI_CREDENTIAL (ret);
   else
     return NULL;
 }
 
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_for_bus:
+ * douki_credential_proxy_new_for_bus:
  * @bus_type: A #GBusType.
  * @flags: Flags from the #GDBusProxyFlags enumeration.
  * @name: A bus name (well-known or unique).
@@ -1403,15 +1403,15 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_sync (
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied.
  * @user_data: User data to pass to @callback.
  *
- * Like unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new() but takes a #GBusType instead of a #GDBusConnection.
+ * Like douki_credential_proxy_new() but takes a #GBusType instead of a #GDBusConnection.
  *
  * When the operation is finished, @callback will be invoked in the thread-default main loop of the thread you are calling this method from (see g_main_context_push_thread_default()).
- * You can then call unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_for_bus_finish() to get the result of the operation.
+ * You can then call douki_credential_proxy_new_for_bus_finish() to get the result of the operation.
  *
- * See unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_for_bus_sync() for the synchronous, blocking version of this constructor.
+ * See douki_credential_proxy_new_for_bus_sync() for the synchronous, blocking version of this constructor.
  */
 void
-unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_for_bus (
+douki_credential_proxy_new_for_bus (
     GBusType             bus_type,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1420,20 +1420,20 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_for_bus (
     GAsyncReadyCallback  callback,
     gpointer             user_data)
 {
-  g_async_initable_new_async (UNISYNC_DBUS_TYPE_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "com.anhquan.DoukiDbus1.Credential", NULL);
+  g_async_initable_new_async (DOUKI_TYPE_CREDENTIAL_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "com.douki.Credential", NULL);
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_for_bus_finish:
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_for_bus().
+ * douki_credential_proxy_new_for_bus_finish:
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to douki_credential_proxy_new_for_bus().
  * @error: Return location for error or %NULL
  *
- * Finishes an operation started with unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_for_bus().
+ * Finishes an operation started with douki_credential_proxy_new_for_bus().
  *
- * Returns: (transfer full) (type UnisyncDbusComAnhquanDoukiDbus1CredentialProxy): The constructed proxy object or %NULL if @error is set.
+ * Returns: (transfer full) (type DoukiCredentialProxy): The constructed proxy object or %NULL if @error is set.
  */
-UnisyncDbusComAnhquanDoukiDbus1Credential *
-unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_for_bus_finish (
+DoukiCredential *
+douki_credential_proxy_new_for_bus_finish (
     GAsyncResult        *res,
     GError             **error)
 {
@@ -1443,13 +1443,13 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_for_bus_finish (
   ret = g_async_initable_new_finish (G_ASYNC_INITABLE (source_object), res, error);
   g_object_unref (source_object);
   if (ret != NULL)
-    return UNISYNC_DBUS_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL (ret);
+    return DOUKI_CREDENTIAL (ret);
   else
     return NULL;
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_for_bus_sync:
+ * douki_credential_proxy_new_for_bus_sync:
  * @bus_type: A #GBusType.
  * @flags: Flags from the #GDBusProxyFlags enumeration.
  * @name: A bus name (well-known or unique).
@@ -1457,16 +1457,16 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_for_bus_finish (
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL
  *
- * Like unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_sync() but takes a #GBusType instead of a #GDBusConnection.
+ * Like douki_credential_proxy_new_sync() but takes a #GBusType instead of a #GDBusConnection.
  *
  * The calling thread is blocked until a reply is received.
  *
- * See unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_for_bus() for the asynchronous version of this constructor.
+ * See douki_credential_proxy_new_for_bus() for the asynchronous version of this constructor.
  *
- * Returns: (transfer full) (type UnisyncDbusComAnhquanDoukiDbus1CredentialProxy): The constructed proxy object or %NULL if @error is set.
+ * Returns: (transfer full) (type DoukiCredentialProxy): The constructed proxy object or %NULL if @error is set.
  */
-UnisyncDbusComAnhquanDoukiDbus1Credential *
-unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_for_bus_sync (
+DoukiCredential *
+douki_credential_proxy_new_for_bus_sync (
     GBusType             bus_type,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1475,9 +1475,9 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_for_bus_sync (
     GError             **error)
 {
   GInitable *ret;
-  ret = g_initable_new (UNISYNC_DBUS_TYPE_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "com.anhquan.DoukiDbus1.Credential", NULL);
+  ret = g_initable_new (DOUKI_TYPE_CREDENTIAL_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "com.douki.Credential", NULL);
   if (ret != NULL)
-    return UNISYNC_DBUS_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL (ret);
+    return DOUKI_CREDENTIAL (ret);
   else
     return NULL;
 }
@@ -1486,19 +1486,19 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_proxy_new_for_bus_sync (
 /* ------------------------------------------------------------------------ */
 
 /**
- * UnisyncDbusComAnhquanDoukiDbus1CredentialSkeleton:
+ * DoukiCredentialSkeleton:
  *
- * The #UnisyncDbusComAnhquanDoukiDbus1CredentialSkeleton structure contains only private data and should only be accessed using the provided API.
+ * The #DoukiCredentialSkeleton structure contains only private data and should only be accessed using the provided API.
  */
 
 /**
- * UnisyncDbusComAnhquanDoukiDbus1CredentialSkeletonClass:
+ * DoukiCredentialSkeletonClass:
  * @parent_class: The parent class.
  *
- * Class structure for #UnisyncDbusComAnhquanDoukiDbus1CredentialSkeleton.
+ * Class structure for #DoukiCredentialSkeleton.
  */
 
-struct _UnisyncDbusComAnhquanDoukiDbus1CredentialSkeletonPrivate
+struct _DoukiCredentialSkeletonPrivate
 {
   GValue *properties;
   GList *changed_properties;
@@ -1508,7 +1508,7 @@ struct _UnisyncDbusComAnhquanDoukiDbus1CredentialSkeletonPrivate
 };
 
 static void
-_unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_handle_method_call (
+_douki_credential_skeleton_handle_method_call (
   GDBusConnection *connection G_GNUC_UNUSED,
   const gchar *sender G_GNUC_UNUSED,
   const gchar *object_path G_GNUC_UNUSED,
@@ -1518,7 +1518,7 @@ _unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_handle_method_call (
   GDBusMethodInvocation *invocation,
   gpointer user_data)
 {
-  UnisyncDbusComAnhquanDoukiDbus1CredentialSkeleton *skeleton = UNISYNC_DBUS_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL_SKELETON (user_data);
+  DoukiCredentialSkeleton *skeleton = DOUKI_CREDENTIAL_SKELETON (user_data);
   _ExtendedGDBusMethodInfo *info;
   GVariantIter iter;
   GVariant *child;
@@ -1533,7 +1533,7 @@ _unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_handle_method_call (
   num_params = g_variant_n_children (parameters);
   num_extra = info->pass_fdlist ? 3 : 2;  paramv = g_new0 (GValue, num_params + num_extra);
   n = 0;
-  g_value_init (&paramv[n], UNISYNC_DBUS_TYPE_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL);
+  g_value_init (&paramv[n], DOUKI_TYPE_CREDENTIAL);
   g_value_set_object (&paramv[n++], skeleton);
   g_value_init (&paramv[n], G_TYPE_DBUS_METHOD_INVOCATION);
   g_value_set_object (&paramv[n++], invocation);
@@ -1560,7 +1560,7 @@ _unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_handle_method_call (
         g_dbus_gvariant_to_gvalue (child, &paramv[n++]);
       g_variant_unref (child);
     }
-  signal_id = g_signal_lookup (info->signal_name, UNISYNC_DBUS_TYPE_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL);
+  signal_id = g_signal_lookup (info->signal_name, DOUKI_TYPE_CREDENTIAL);
   g_value_init (&return_value, G_TYPE_BOOLEAN);
   g_signal_emitv (paramv, signal_id, 0, &return_value);
   if (!g_value_get_boolean (&return_value))
@@ -1572,7 +1572,7 @@ _unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_handle_method_call (
 }
 
 static GVariant *
-_unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_handle_get_property (
+_douki_credential_skeleton_handle_get_property (
   GDBusConnection *connection G_GNUC_UNUSED,
   const gchar *sender G_GNUC_UNUSED,
   const gchar *object_path G_GNUC_UNUSED,
@@ -1581,13 +1581,13 @@ _unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_handle_get_property (
   GError **error,
   gpointer user_data)
 {
-  UnisyncDbusComAnhquanDoukiDbus1CredentialSkeleton *skeleton = UNISYNC_DBUS_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL_SKELETON (user_data);
+  DoukiCredentialSkeleton *skeleton = DOUKI_CREDENTIAL_SKELETON (user_data);
   GValue value = G_VALUE_INIT;
   GParamSpec *pspec;
   _ExtendedGDBusPropertyInfo *info;
   GVariant *ret;
   ret = NULL;
-  info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_unisync_dbus_com_anhquan_douki_dbus1_credential_interface_info.parent_struct, property_name);
+  info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_douki_credential_interface_info.parent_struct, property_name);
   g_assert (info != NULL);
   pspec = g_object_class_find_property (G_OBJECT_GET_CLASS (skeleton), info->hyphen_name);
   if (pspec == NULL)
@@ -1605,7 +1605,7 @@ _unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_handle_get_property (
 }
 
 static gboolean
-_unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_handle_set_property (
+_douki_credential_skeleton_handle_set_property (
   GDBusConnection *connection G_GNUC_UNUSED,
   const gchar *sender G_GNUC_UNUSED,
   const gchar *object_path G_GNUC_UNUSED,
@@ -1615,13 +1615,13 @@ _unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_handle_set_property (
   GError **error,
   gpointer user_data)
 {
-  UnisyncDbusComAnhquanDoukiDbus1CredentialSkeleton *skeleton = UNISYNC_DBUS_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL_SKELETON (user_data);
+  DoukiCredentialSkeleton *skeleton = DOUKI_CREDENTIAL_SKELETON (user_data);
   GValue value = G_VALUE_INIT;
   GParamSpec *pspec;
   _ExtendedGDBusPropertyInfo *info;
   gboolean ret;
   ret = FALSE;
-  info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_unisync_dbus_com_anhquan_douki_dbus1_credential_interface_info.parent_struct, property_name);
+  info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_douki_credential_interface_info.parent_struct, property_name);
   g_assert (info != NULL);
   pspec = g_object_class_find_property (G_OBJECT_GET_CLASS (skeleton), info->hyphen_name);
   if (pspec == NULL)
@@ -1641,43 +1641,43 @@ _unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_handle_set_property (
   return ret;
 }
 
-static const GDBusInterfaceVTable _unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_vtable =
+static const GDBusInterfaceVTable _douki_credential_skeleton_vtable =
 {
-  _unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_handle_method_call,
-  _unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_handle_get_property,
-  _unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_handle_set_property,
+  _douki_credential_skeleton_handle_method_call,
+  _douki_credential_skeleton_handle_get_property,
+  _douki_credential_skeleton_handle_set_property,
   {NULL}
 };
 
 static GDBusInterfaceInfo *
-unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_dbus_interface_get_info (GDBusInterfaceSkeleton *skeleton G_GNUC_UNUSED)
+douki_credential_skeleton_dbus_interface_get_info (GDBusInterfaceSkeleton *skeleton G_GNUC_UNUSED)
 {
-  return unisync_dbus_com_anhquan_douki_dbus1_credential_interface_info ();
+  return douki_credential_interface_info ();
 }
 
 static GDBusInterfaceVTable *
-unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_dbus_interface_get_vtable (GDBusInterfaceSkeleton *skeleton G_GNUC_UNUSED)
+douki_credential_skeleton_dbus_interface_get_vtable (GDBusInterfaceSkeleton *skeleton G_GNUC_UNUSED)
 {
-  return (GDBusInterfaceVTable *) &_unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_vtable;
+  return (GDBusInterfaceVTable *) &_douki_credential_skeleton_vtable;
 }
 
 static GVariant *
-unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_dbus_interface_get_properties (GDBusInterfaceSkeleton *_skeleton)
+douki_credential_skeleton_dbus_interface_get_properties (GDBusInterfaceSkeleton *_skeleton)
 {
-  UnisyncDbusComAnhquanDoukiDbus1CredentialSkeleton *skeleton = UNISYNC_DBUS_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL_SKELETON (_skeleton);
+  DoukiCredentialSkeleton *skeleton = DOUKI_CREDENTIAL_SKELETON (_skeleton);
 
   GVariantBuilder builder;
   guint n;
   g_variant_builder_init (&builder, G_VARIANT_TYPE ("a{sv}"));
-  if (_unisync_dbus_com_anhquan_douki_dbus1_credential_interface_info.parent_struct.properties == NULL)
+  if (_douki_credential_interface_info.parent_struct.properties == NULL)
     goto out;
-  for (n = 0; _unisync_dbus_com_anhquan_douki_dbus1_credential_interface_info.parent_struct.properties[n] != NULL; n++)
+  for (n = 0; _douki_credential_interface_info.parent_struct.properties[n] != NULL; n++)
     {
-      GDBusPropertyInfo *info = _unisync_dbus_com_anhquan_douki_dbus1_credential_interface_info.parent_struct.properties[n];
+      GDBusPropertyInfo *info = _douki_credential_interface_info.parent_struct.properties[n];
       if (info->flags & G_DBUS_PROPERTY_INFO_FLAGS_READABLE)
         {
           GVariant *value;
-          value = _unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_handle_get_property (g_dbus_interface_skeleton_get_connection (G_DBUS_INTERFACE_SKELETON (skeleton)), NULL, g_dbus_interface_skeleton_get_object_path (G_DBUS_INTERFACE_SKELETON (skeleton)), "com.anhquan.DoukiDbus1.Credential", info->name, NULL, skeleton);
+          value = _douki_credential_skeleton_handle_get_property (g_dbus_interface_skeleton_get_connection (G_DBUS_INTERFACE_SKELETON (skeleton)), NULL, g_dbus_interface_skeleton_get_object_path (G_DBUS_INTERFACE_SKELETON (skeleton)), "com.douki.Credential", info->name, NULL, skeleton);
           if (value != NULL)
             {
               g_variant_take_ref (value);
@@ -1691,40 +1691,40 @@ out:
 }
 
 static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton G_GNUC_UNUSED)
+douki_credential_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton G_GNUC_UNUSED)
 {
 }
 
-static void unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_iface_init (UnisyncDbusComAnhquanDoukiDbus1CredentialIface *iface);
+static void douki_credential_skeleton_iface_init (DoukiCredentialIface *iface);
 #if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_38
-G_DEFINE_TYPE_WITH_CODE (UnisyncDbusComAnhquanDoukiDbus1CredentialSkeleton, unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton, G_TYPE_DBUS_INTERFACE_SKELETON,
-                         G_ADD_PRIVATE (UnisyncDbusComAnhquanDoukiDbus1CredentialSkeleton)
-                         G_IMPLEMENT_INTERFACE (UNISYNC_DBUS_TYPE_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL, unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_iface_init))
+G_DEFINE_TYPE_WITH_CODE (DoukiCredentialSkeleton, douki_credential_skeleton, G_TYPE_DBUS_INTERFACE_SKELETON,
+                         G_ADD_PRIVATE (DoukiCredentialSkeleton)
+                         G_IMPLEMENT_INTERFACE (DOUKI_TYPE_CREDENTIAL, douki_credential_skeleton_iface_init))
 
 #else
-G_DEFINE_TYPE_WITH_CODE (UnisyncDbusComAnhquanDoukiDbus1CredentialSkeleton, unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton, G_TYPE_DBUS_INTERFACE_SKELETON,
-                         G_IMPLEMENT_INTERFACE (UNISYNC_DBUS_TYPE_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL, unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_iface_init))
+G_DEFINE_TYPE_WITH_CODE (DoukiCredentialSkeleton, douki_credential_skeleton, G_TYPE_DBUS_INTERFACE_SKELETON,
+                         G_IMPLEMENT_INTERFACE (DOUKI_TYPE_CREDENTIAL, douki_credential_skeleton_iface_init))
 
 #endif
 static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_finalize (GObject *object)
+douki_credential_skeleton_finalize (GObject *object)
 {
-  UnisyncDbusComAnhquanDoukiDbus1CredentialSkeleton *skeleton = UNISYNC_DBUS_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL_SKELETON (object);
+  DoukiCredentialSkeleton *skeleton = DOUKI_CREDENTIAL_SKELETON (object);
   g_list_free_full (skeleton->priv->changed_properties, (GDestroyNotify) _changed_property_free);
   if (skeleton->priv->changed_properties_idle_source != NULL)
     g_source_destroy (skeleton->priv->changed_properties_idle_source);
   g_main_context_unref (skeleton->priv->context);
   g_mutex_clear (&skeleton->priv->lock);
-  G_OBJECT_CLASS (unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_parent_class)->finalize (object);
+  G_OBJECT_CLASS (douki_credential_skeleton_parent_class)->finalize (object);
 }
 
 static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_init (UnisyncDbusComAnhquanDoukiDbus1CredentialSkeleton *skeleton)
+douki_credential_skeleton_init (DoukiCredentialSkeleton *skeleton)
 {
 #if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_38
-  skeleton->priv = unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_get_instance_private (skeleton);
+  skeleton->priv = douki_credential_skeleton_get_instance_private (skeleton);
 #else
-  skeleton->priv = G_TYPE_INSTANCE_GET_PRIVATE (skeleton, UNISYNC_DBUS_TYPE_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL_SKELETON, UnisyncDbusComAnhquanDoukiDbus1CredentialSkeletonPrivate);
+  skeleton->priv = G_TYPE_INSTANCE_GET_PRIVATE (skeleton, DOUKI_TYPE_CREDENTIAL_SKELETON, DoukiCredentialSkeletonPrivate);
 #endif
 
   g_mutex_init (&skeleton->priv->lock);
@@ -1732,40 +1732,40 @@ unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_init (UnisyncDbusComAnh
 }
 
 static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_class_init (UnisyncDbusComAnhquanDoukiDbus1CredentialSkeletonClass *klass)
+douki_credential_skeleton_class_init (DoukiCredentialSkeletonClass *klass)
 {
   GObjectClass *gobject_class;
   GDBusInterfaceSkeletonClass *skeleton_class;
 
   gobject_class = G_OBJECT_CLASS (klass);
-  gobject_class->finalize = unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_finalize;
+  gobject_class->finalize = douki_credential_skeleton_finalize;
 
   skeleton_class = G_DBUS_INTERFACE_SKELETON_CLASS (klass);
-  skeleton_class->get_info = unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_dbus_interface_get_info;
-  skeleton_class->get_properties = unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_dbus_interface_get_properties;
-  skeleton_class->flush = unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_dbus_interface_flush;
-  skeleton_class->get_vtable = unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_dbus_interface_get_vtable;
+  skeleton_class->get_info = douki_credential_skeleton_dbus_interface_get_info;
+  skeleton_class->get_properties = douki_credential_skeleton_dbus_interface_get_properties;
+  skeleton_class->flush = douki_credential_skeleton_dbus_interface_flush;
+  skeleton_class->get_vtable = douki_credential_skeleton_dbus_interface_get_vtable;
 
 #if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_38
-  g_type_class_add_private (klass, sizeof (UnisyncDbusComAnhquanDoukiDbus1CredentialSkeletonPrivate));
+  g_type_class_add_private (klass, sizeof (DoukiCredentialSkeletonPrivate));
 #endif
 }
 
 static void
-unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_iface_init (UnisyncDbusComAnhquanDoukiDbus1CredentialIface *iface G_GNUC_UNUSED)
+douki_credential_skeleton_iface_init (DoukiCredentialIface *iface G_GNUC_UNUSED)
 {
 }
 
 /**
- * unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_new:
+ * douki_credential_skeleton_new:
  *
- * Creates a skeleton object for the D-Bus interface <link linkend="gdbus-interface-com-anhquan-DoukiDbus1-Credential.top_of_page">com.anhquan.DoukiDbus1.Credential</link>.
+ * Creates a skeleton object for the D-Bus interface <link linkend="gdbus-interface-com-douki-Credential.top_of_page">com.douki.Credential</link>.
  *
- * Returns: (transfer full) (type UnisyncDbusComAnhquanDoukiDbus1CredentialSkeleton): The skeleton object.
+ * Returns: (transfer full) (type DoukiCredentialSkeleton): The skeleton object.
  */
-UnisyncDbusComAnhquanDoukiDbus1Credential *
-unisync_dbus_com_anhquan_douki_dbus1_credential_skeleton_new (void)
+DoukiCredential *
+douki_credential_skeleton_new (void)
 {
-  return UNISYNC_DBUS_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL (g_object_new (UNISYNC_DBUS_TYPE_COM_ANHQUAN_DOUKI_DBUS1_CREDENTIAL_SKELETON, NULL));
+  return DOUKI_CREDENTIAL (g_object_new (DOUKI_TYPE_CREDENTIAL_SKELETON, NULL));
 }
 

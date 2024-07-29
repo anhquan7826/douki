@@ -25,9 +25,9 @@
 },
 {
   "directory": "/home/anhquan7826/Desktop/douki/linux/build",
-  "command": "/usr/bin/cc -I/home/anhquan7826/Desktop/douki/linux/include -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/uuid -I/usr/include/json-glib-1.0 -g -o CMakeFiles/douki.dir/src/dbus/iface-credential.c.o -c /home/anhquan7826/Desktop/douki/linux/src/dbus/iface-credential.c",
-  "file": "/home/anhquan7826/Desktop/douki/linux/src/dbus/iface-credential.c",
-  "output": "CMakeFiles/douki.dir/src/dbus/iface-credential.c.o"
+  "command": "/usr/bin/cc -I/home/anhquan7826/Desktop/douki/linux/include -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/uuid -I/usr/include/json-glib-1.0 -g -o CMakeFiles/douki.dir/src/dbus/dbus-credential.c.o -c /home/anhquan7826/Desktop/douki/linux/src/dbus/dbus-credential.c",
+  "file": "/home/anhquan7826/Desktop/douki/linux/src/dbus/dbus-credential.c",
+  "output": "CMakeFiles/douki.dir/src/dbus/dbus-credential.c.o"
 },
 {
   "directory": "/home/anhquan7826/Desktop/douki/linux/build",
