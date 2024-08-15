@@ -1,12 +1,11 @@
 # ninja log v5
 28	986	1722496317078576295	CMakeFiles/douki.dir/src/core/main-process.c.o	ffce61b80afc99fb
-28	1111	1722496317207576292	CMakeFiles/douki.dir/src/dbus/dbus-credential.c.o	2d2b66343a83528e
+9	519	1723196866497899186	CMakeFiles/douki.dir/src/dbus/dbus-credential.c.o	2d2b66343a83528e
 26	982	1722496317078576295	CMakeFiles/douki.dir/src/core/socket.c.o	2355c10db1e60713
 3	365	1722496410744044211	CMakeFiles/douki.dir/src/model/device-info.c.o	41fce8485193db90
 25	986	1722496317078576295	CMakeFiles/douki.dir/src/core/mdns.c.o	fa07a82be4b79dd5
 4	319	1722496410700044985	CMakeFiles/douki.dir/src/utils/json-util.c.o	d1ba84092bda9e3
 4	398	1722496410778043613	CMakeFiles/douki.dir/src/model/device-message.c.o	18bfcc9fc6083c8e
-21	984	1722496317079576295	CMakeFiles/douki.dir/src/main.c.o	9eaad674d88ac577
+3	226	1723199395507040465	CMakeFiles/douki.dir/src/main.c.o	9eaad674d88ac577
 5	233	1722496357295575412	CMakeFiles/douki.dir/src/utils/socket-util.c.o	681509d4019eb284
-229	316	1722247128852183545	douki	46a1615327880a28
-3	89	1722507325155975804	douki	46a1615327880a28
+226	310	1723199395588994828	douki	46a1615327880a28

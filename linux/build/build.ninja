@@ -56,33 +56,26 @@ build CMakeFiles/douki.dir/src/main.c.o: C_COMPILER__douki_unscanned_Debug /home
   OBJECT_DIR = CMakeFiles/douki.dir
   OBJECT_FILE_DIR = CMakeFiles/douki.dir/src
 
-build CMakeFiles/douki.dir/src/core/mdns.c.o: C_COMPILER__douki_unscanned_Debug /home/anhquan7826/Desktop/douki/linux/src/core/mdns.c || cmake_object_order_depends_target_douki
-  DEP_FILE = CMakeFiles/douki.dir/src/core/mdns.c.o.d
+build CMakeFiles/douki.dir/src/core/process.c.o: C_COMPILER__douki_unscanned_Debug /home/anhquan7826/Desktop/douki/linux/src/core/process.c || cmake_object_order_depends_target_douki
+  DEP_FILE = CMakeFiles/douki.dir/src/core/process.c.o.d
   FLAGS = -g
   INCLUDES = -I/home/anhquan7826/Desktop/douki/linux/include -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/uuid -I/usr/include/json-glib-1.0
   OBJECT_DIR = CMakeFiles/douki.dir
   OBJECT_FILE_DIR = CMakeFiles/douki.dir/src/core
 
-build CMakeFiles/douki.dir/src/core/socket.c.o: C_COMPILER__douki_unscanned_Debug /home/anhquan7826/Desktop/douki/linux/src/core/socket.c || cmake_object_order_depends_target_douki
-  DEP_FILE = CMakeFiles/douki.dir/src/core/socket.c.o.d
+build CMakeFiles/douki.dir/src/core/mdns/mdns.c.o: C_COMPILER__douki_unscanned_Debug /home/anhquan7826/Desktop/douki/linux/src/core/mdns/mdns.c || cmake_object_order_depends_target_douki
+  DEP_FILE = CMakeFiles/douki.dir/src/core/mdns/mdns.c.o.d
   FLAGS = -g
   INCLUDES = -I/home/anhquan7826/Desktop/douki/linux/include -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/uuid -I/usr/include/json-glib-1.0
   OBJECT_DIR = CMakeFiles/douki.dir
-  OBJECT_FILE_DIR = CMakeFiles/douki.dir/src/core
+  OBJECT_FILE_DIR = CMakeFiles/douki.dir/src/core/mdns
 
-build CMakeFiles/douki.dir/src/core/main-process.c.o: C_COMPILER__douki_unscanned_Debug /home/anhquan7826/Desktop/douki/linux/src/core/main-process.c || cmake_object_order_depends_target_douki
-  DEP_FILE = CMakeFiles/douki.dir/src/core/main-process.c.o.d
+build CMakeFiles/douki.dir/src/core/socket/socket.c.o: C_COMPILER__douki_unscanned_Debug /home/anhquan7826/Desktop/douki/linux/src/core/socket/socket.c || cmake_object_order_depends_target_douki
+  DEP_FILE = CMakeFiles/douki.dir/src/core/socket/socket.c.o.d
   FLAGS = -g
   INCLUDES = -I/home/anhquan7826/Desktop/douki/linux/include -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/uuid -I/usr/include/json-glib-1.0
   OBJECT_DIR = CMakeFiles/douki.dir
-  OBJECT_FILE_DIR = CMakeFiles/douki.dir/src/core
-
-build CMakeFiles/douki.dir/src/dbus/dbus-credential.c.o: C_COMPILER__douki_unscanned_Debug /home/anhquan7826/Desktop/douki/linux/src/dbus/dbus-credential.c || cmake_object_order_depends_target_douki
-  DEP_FILE = CMakeFiles/douki.dir/src/dbus/dbus-credential.c.o.d
-  FLAGS = -g
-  INCLUDES = -I/home/anhquan7826/Desktop/douki/linux/include -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/uuid -I/usr/include/json-glib-1.0
-  OBJECT_DIR = CMakeFiles/douki.dir
-  OBJECT_FILE_DIR = CMakeFiles/douki.dir/src/dbus
+  OBJECT_FILE_DIR = CMakeFiles/douki.dir/src/core/socket
 
 build CMakeFiles/douki.dir/src/model/device-info.c.o: C_COMPILER__douki_unscanned_Debug /home/anhquan7826/Desktop/douki/linux/src/model/device-info.c || cmake_object_order_depends_target_douki
   DEP_FILE = CMakeFiles/douki.dir/src/model/device-info.c.o.d
@@ -120,7 +113,7 @@ build CMakeFiles/douki.dir/src/utils/socket-util.c.o: C_COMPILER__douki_unscanne
 #############################################
 # Link the executable douki
 
-build douki: C_EXECUTABLE_LINKER__douki_Debug CMakeFiles/douki.dir/src/main.c.o CMakeFiles/douki.dir/src/core/mdns.c.o CMakeFiles/douki.dir/src/core/socket.c.o CMakeFiles/douki.dir/src/core/main-process.c.o CMakeFiles/douki.dir/src/dbus/dbus-credential.c.o CMakeFiles/douki.dir/src/model/device-info.c.o CMakeFiles/douki.dir/src/model/device-message.c.o CMakeFiles/douki.dir/src/utils/json-util.c.o CMakeFiles/douki.dir/src/utils/socket-util.c.o
+build douki: C_EXECUTABLE_LINKER__douki_Debug CMakeFiles/douki.dir/src/main.c.o CMakeFiles/douki.dir/src/core/process.c.o CMakeFiles/douki.dir/src/core/mdns/mdns.c.o CMakeFiles/douki.dir/src/core/socket/socket.c.o CMakeFiles/douki.dir/src/model/device-info.c.o CMakeFiles/douki.dir/src/model/device-message.c.o CMakeFiles/douki.dir/src/utils/json-util.c.o CMakeFiles/douki.dir/src/utils/socket-util.c.o
   FLAGS = -g
   LINK_LIBRARIES = -lgtk-4  -lpangocairo-1.0  -lpango-1.0  -lharfbuzz  -lgdk_pixbuf-2.0  -lcairo-gobject  -lcairo  -lvulkan  -lgraphene-1.0  -lgio-2.0  -lgobject-2.0  -lglib-2.0  -luuid  -ljson-glib-1.0  -lgio-2.0  -lgobject-2.0  -lglib-2.0  -lavahi-common  -lavahi-client  -luuid  -ljson-glib-1.0  -lavahi-common  -lavahi-client
   OBJECT_DIR = CMakeFiles/douki.dir

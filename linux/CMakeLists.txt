@@ -13,10 +13,9 @@ pkg_search_module(AVAHI REQUIRED avahi-client)
 set(
     SOURCE 
     src/main.c
-    src/core/mdns.c
-    src/core/socket.c
-    src/core/main-process.c
-    src/dbus/dbus-credential.c
+    src/core/process.c
+    src/core/mdns/mdns.c
+    src/core/socket/socket.c
     src/model/device-info.c
     src/model/device-message.c
     src/utils/json-util.c

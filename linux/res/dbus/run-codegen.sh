@@ -1,14 +1,14 @@
 gdbus-codegen \
-    --interface-prefix=com.douki \
+    --interface-prefix=com.anhquan.douki \
     --c-namespace Douki \
     --header \
-    --output ../../include/dbus-credential.h \
+    --output ../../include/dbus-authentication.h \
     --pragma-once \
-    v1/com.douki.Credential.xml
+    v1/authentication.xml
 
 gdbus-codegen \
-    --interface-prefix=com.douki \
+    --interface-prefix=com.anhquan.douki \
     --c-namespace Douki \
     --body \
-    --output ../../src/dbus/dbus-credential.c \
-    v1/com.douki.Credential.xml
+    --output ../../src/core/dbus/authentication.c \
+    v1/authentication.xml

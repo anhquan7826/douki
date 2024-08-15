@@ -1,0 +1,13 @@
+<node>
+    <interface name="com.anhquan.douki.Authentication">
+        <method name="GetId">
+            <arg name="id" direction="out" type="s"></arg>
+        </method>
+        <method name="GetSecret">
+            <arg name="password" direction="out" type="s"></arg>
+        </method>
+        <method name="CreateSecret">
+            <arg name="result" direction="out" type="b"></arg>
+        </method>
+    </interface>
+</node>
