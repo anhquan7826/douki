@@ -1,6 +1,6 @@
 #include "main-process.h"
 #include <glib.h>
-#include "dbus-credential.h"
+#include "authentication.h"
 
 static gboolean handle_set_name(DoukiCredential *interface, GDBusMethodInvocation *invocation,
 					const gchar *name, gpointer user_data)

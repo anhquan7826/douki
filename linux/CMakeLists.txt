@@ -13,6 +13,7 @@ pkg_search_module(AVAHI REQUIRED avahi-client)
 set(
     SOURCE 
     src/main.c
+    src/core/auth/auth-manager.c
     src/core/process.c
     src/core/mdns/mdns.c
     src/core/socket/socket.c
