@@ -5,6 +5,7 @@
         "uuid.h": "c",
         "unisync-process.h": "c",
         "string.h": "c",
-        "glib.h": "c"
+        "glib.h": "c",
+        "string-util.h": "c"
     },
 }

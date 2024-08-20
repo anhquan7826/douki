@@ -1,3 +1,0 @@
-/home/anhquan7826/Desktop/douki/linux/build/CMakeFiles/douki.dir
-/home/anhquan7826/Desktop/douki/linux/build/CMakeFiles/edit_cache.dir
-/home/anhquan7826/Desktop/douki/linux/build/CMakeFiles/rebuild_cache.dir
