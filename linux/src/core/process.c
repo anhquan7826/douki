@@ -1,54 +1,31 @@
-#include "main-process.h"
-#include "socket-util.h"
-#include <glib/gthread.h>
-#include <gio/gio.h>
+#include "process.h"
 
-static GThread *process_thread;
-
-static void on_stream_data(const gchar* data)
-{
-    g_print("%s\n", data);
-}
-
-static void on_stream_close(gpointer data)
-{
-    g_print("Connection closed");
-}
-
-static gpointer listen_std_in(gpointer data) 
-{
-    GSocketConnection *socket = G_SOCKET_CONNECTION(data);
-    GDataOutputStream *out_stream = util_socket_get_output_stream(socket);
-    char input[1024];
-    GError *error = NULL;
-    while (TRUE)
-    {
-        printf("> ");
-        fgets(input, sizeof(input), stdin);
-        input[strcspn(input, "\n")] = 0;
-        g_data_output_stream_put_string(out_stream, input, NULL, &error);
-        if (error)
-        {
-            g_printerr("Cannot write to output stream:\n%s\n", error->message);
-            error = NULL;
-        }
-    }
-}
-
-static void on_new_socket_connection(GSocketConnection *socket)
-{
-    util_socket_read_input_stream(socket, on_stream_data, on_stream_close, NULL);
-    GThread *thread = g_thread_new("stdin", listen_std_in, socket);
-}
-
-static gpointer start(gpointer data)
-{
-    mdns_registration_new("unisync", "_unisync._tcp", "local", 50810);
-    socket_server_init(on_new_socket_connection);
-}
+static void on_new_connection(DeviceConnection *connection);
+static void on_new_message(char *message, void *data);
+static void on_connection_closed(void *data);
 
 void run_process()
 {
-    process_thread = g_thread_new("unisync_process", start, NULL);
-    g_thread_join(process_thread);
+    DeviceListener *listener = device_listener_get_instance();
+    device_listener_add_on_new_connection_callback(listener, on_new_connection);
+    device_listener_join_thread(listener);
+}
+
+static void on_new_connection(DeviceConnection *connection)
+{
+    g_print("New connection!\n");
+    device_connection_set_on_message_callback(connection, on_new_message, NULL);
+    device_connection_set_on_connection_closed_callback(connection, on_connection_closed, connection);
+}
+
+static void on_new_message(char *message, void *data)
+{
+    g_print("Message: %s\n", message);
+}
+
+static void on_connection_closed(void *data)
+{
+    DeviceConnection *connection = (DeviceConnection *)data;
+    g_print("Connection closed!\n");
+    g_object_unref(connection);
 }

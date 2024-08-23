@@ -5,19 +5,18 @@ set (CMAKE_PREFIX_PATH /usr/include/)
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK REQUIRED gtk4)
-
-pkg_search_module(UUID REQUIRED uuid)
-pkg_search_module(JSONGLIB REQUIRED json-glib-1.0)
-pkg_search_module(AVAHI REQUIRED avahi-client)
+pkg_check_modules(UUID REQUIRED uuid)
+pkg_check_modules(JSONGLIB REQUIRED json-glib-1.0)
+pkg_check_modules(AVAHI REQUIRED avahi-client)
+pkg_check_modules(SQLITE3 REQUIRED sqlite3)
 
 set(
     SOURCE
 
     src/core/auth/auth-manager.c
     src/core/dbus/authentication.c
-    src/core/mdns/mdns.c
-    src/core/socket/device-connection.c
-    src/core/socket/socket.c
+    src/core/device-connection.c
+    src/core/device-listener.c
     src/core/process.c
 
     src/database/entity/entity-device.c
@@ -48,3 +47,6 @@ target_link_libraries(douki ${JSONGLIB_LIBRARIES})
 
 target_include_directories(douki PUBLIC ${AVAHI_INCLUDE_DIRS})
 target_link_libraries(douki ${AVAHI_LIBRARIES})
+
+target_include_directories(douki PUBLIC ${SQLITE3_INCLUDE_DIRS})
+target_link_libraries(douki ${SQLITE3_LIBRARIES})

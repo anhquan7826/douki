@@ -3,6 +3,9 @@
 
 static const char* table_info = "device_info";
 
+static void entity_info_get_property(GObject *object, guint property_id, const GValue *value, GParamSpec *pspec);
+static void entity_info_set_property(GObject *object, guint property_id, const GValue *value, GParamSpec *pspec);
+
 enum
 {
     TABLE_INFO_COLUMN_ID,
@@ -22,7 +25,7 @@ static GParamSpec *entity_info_props[ENTITY_INFO_N_PROPERTIES] = { NULL };
 
 struct _EntityInfo
 {
-    GObject *parent_instance;
+    GObject parent_instance;
     int id;
     const gchar* name;
     const gchar* password;

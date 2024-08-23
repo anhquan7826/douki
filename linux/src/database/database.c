@@ -1,5 +1,5 @@
 #include "database.h"
-#include <cstddef>
+#include <glib.h>
 
 #define APP_DB "douki.db"
 

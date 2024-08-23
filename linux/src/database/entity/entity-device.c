@@ -2,6 +2,9 @@
 
 static const char* table_device = "connected_device";
 
+static void entity_device_get_property(GObject *object, guint property_id, GValue *value, GParamSpec *pspec);
+static void entity_device_set_property(GObject *object, guint property_id, GValue *value, GParamSpec *pspec);
+
 enum
 {
     TABLE_DEVICE_COLUMN_ID,
@@ -17,7 +20,7 @@ enum {
 static GParamSpec *entity_device_props[ENTITY_DEVICE_N_PROPERTIES] = { NULL };
 
 struct _EntityDevice {
-    GObject *parent_instance;
+    GObject parent_instance;
     int id;
     const char* name;
 };

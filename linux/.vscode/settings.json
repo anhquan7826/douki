@@ -6,6 +6,13 @@
         "unisync-process.h": "c",
         "string.h": "c",
         "glib.h": "c",
-        "string-util.h": "c"
+        "string-util.h": "c",
+        "device-connection.h": "c",
+        "port-util.h": "c",
+        "constants.h": "c",
+        "process.h": "c",
+        "database.h": "c",
+        "gio.h": "c",
+        "entity-device.h": "c"
     },
 }

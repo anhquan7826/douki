@@ -1,6 +1,4 @@
 #include "logger-util.h"
-#include <stdarg.h>
-#include <cstdio>
 
 void log_print(const gchar *format, ...)
 {
