@@ -2,56 +2,41 @@
 #include <glib-object.h>
 #include <json-glib/json-glib.h>
 
-#define U_MESSAGE_TYPE_PAIR                 "pair"
-#define U_MESSAGE_TYPE_STATUS               "status"
-#define U_MESSAGE_TYPE_CLIPBOARD            "clipboard"
-#define U_MESSAGE_TYPE_NOTIFICATION         "notification"
-#define U_MESSAGE_TYPE_VOLUME               "volume"
-#define U_MESSAGE_TYPE_RUN_COMMAND          "run_command"
-#define U_MESSAGE_TYPE_RING_PHONE           "ring_phone"
-#define U_MESSAGE_TYPE_TELEPHONY            "telephony"
-#define U_MESSAGE_TYPE_SHARING              "sharing"
-#define U_MESSAGE_TYPE_GALLERY              "gallery"
-#define U_MESSAGE_TYPE_STORAGE              "storage"
-#define U_MESSAGE_TYPE_SSH                  "ssh"
-#define U_MESSAGE_TYPE_MEDIA                "media"
+G_BEGIN_DECLS
 
-#define U_MESSAGE_HEADER_TYPE_REQUEST       "request"
-#define U_MESSAGE_HEADER_TYPE_RESPONSE      "response"
-#define U_MESSAGE_HEADER_TYPE_NOTIFICATION  "notification"
+#define DEVICE_TYPE_MESSAGE device_message_get_type()
 
-#define U_MESSAGE_HEADER_STATUS_SUCCESS     "success"
-#define U_MESSAGE_HEADER_STATUS_ERROR       "error"
+enum {
+    PROP_DEVICE_MESSAGE_ID = 1,
+    PROP_DEVICE_MESSAGE_METHOD,
+    PROP_DEVICE_MESSAGE_TYPE,
+    PROP_DEVICE_MESSAGE_STATUS,
+    PROP_DEVICE_MESSAGE_TIMESTAMP,
+    PROP_DEVICE_MESSAGE_BODY,
+    N_PROPS_DEVICE_MESSAGE
+};
 
-#define U_TYPE_MESSAGE u_message_get_type()
-G_DECLARE_FINAL_TYPE(UMessage, u_message, U, MESSAGE, GObject)
+typedef enum {
+    REQUEST,
+    RESPONSE,
+    SIGNAL
+} MessageType;
 
-#define U_TYPE_MESSAGE_HEADER u_message_header_get_type()
-G_DECLARE_FINAL_TYPE(UMessageHeader, u_message_header, U, MESSAGE_HEADER, GObject)
+typedef enum {
+    NONE,
+    SUCCESS,
+    ERROR
+} MessageStatus;
 
-#define U_TYPE_MESSAGE_PAYLOAD u_message_payload_get_type()
-G_DECLARE_FINAL_TYPE(UMessagePayload, u_message_payload, U, MESSAGE_PAYLOAD, GObject)
+G_DECLARE_FINAL_TYPE(DeviceMessage, device_message, DEVICE, MESSAGE, GObject)
 
-UMessage *u_message_new_with_values(int time, const gchar *type, JsonObject *body, UMessageHeader *header, UMessagePayload *payload);
+struct _DeviceMessageClass {
+    GObjectClass parent_class;
+    DeviceMessage (*device_message_from_json) (char *raw_string);
+};
 
-UMessageHeader *u_message_header_new_with_values(const gchar *type, const gchar *method, const gchar *status);
+DeviceMessage *device_message_from_json(const char *raw_string);
 
-UMessagePayload *u_message_payload_new_with_values(int port, int size);
+const char *device_message_to_json(DeviceMessage *self);
 
-JsonObject *u_message_to_json(UMessage *self);
-
-JsonObject *u_message_header_to_json(UMessageHeader *self);
-
-JsonObject *u_message_payload_to_json(UMessagePayload *self);
-
-void u_message_body_put_string_data(UMessage *self, const char *key, const char *value);
-
-void u_message_body_put_int_data(UMessage *self, const char *key, int value);
-
-void u_message_body_put_bool_data(UMessage *self, const char *key, gboolean value);
-
-void u_message_body_put_double_data(UMessage *self, const char *key, double value);
-
-void u_message_body_put_array_data(UMessage *self, const char *key, JsonArray *value);
-
-void u_message_body_put_object_data(UMessage *self, const char *key, JsonObject *value);
+G_END_DECLS

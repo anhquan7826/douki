@@ -13,6 +13,7 @@
         "process.h": "c",
         "database.h": "c",
         "gio.h": "c",
-        "entity-device.h": "c"
+        "entity-device.h": "c",
+        "device-message.h": "c"
     },
 }

@@ -1,4 +1,5 @@
 #include "process.h"
+#include "device-message.h"
 
 // static gboolean handle_set_name(DoukiCredential *interface, GDBusMethodInvocation *invocation,
 // 					const gchar *name, gpointer user_data)
@@ -10,7 +11,7 @@
 // }
 
 // static gboolean handle_set_password(DoukiCredential *interface, GDBusMethodInvocation *invocation,
-// 					const gchar *password, const gchar *retype, gpointer user_data) 
+// 					const gchar *password, const gchar *retype, gpointer user_data)
 // {
 //     g_print("handle-set-password invoked\n");
 //     g_print("%s\n", password);
@@ -53,7 +54,7 @@ int main(int argc, char **argv)
     // GMainLoop *loop = NULL;
     // loop = g_main_loop_new(NULL, FALSE);
     // g_bus_own_name(
-    //     G_BUS_TYPE_SESSION, 
+    //     G_BUS_TYPE_SESSION,
     //     "com.anhquan.douki",
     //     G_BUS_NAME_OWNER_FLAGS_NONE,
     //     on_bus_acquired,
@@ -63,6 +64,39 @@ int main(int argc, char **argv)
     //     NULL
     // );
     // g_main_loop_run(loop);
-    run_process();
+    // run_process();
+    const char *json =
+        "{"
+        "\"id\": \"abcdef\","
+        "\"method\": \"sample_method\","
+        "\"type\": \"signal\","
+        "\"status\": \"success\","
+        "\"timestamp\": 1000000000,"
+        "\"body\": null"
+        "}";
+    g_print("%s\n", json);
+    // DeviceMessage *instance = g_object_new(
+    //     DEVICE_TYPE_MESSAGE,
+    //     "id",
+    //     "abcdef", NULL);
+    DeviceMessage *instance = device_message_from_json(json);
+    if (instance == NULL)
+    {
+        g_print("instance is null\n");
+        return 1;
+    }
+    guint n_props = 0;
+    GParamSpec **pspecs = json_serializable_list_properties(JSON_SERIALIZABLE(instance), &n_props);
+    for (int i = 1; i < n_props; i++)
+    {
+        GParamSpec *pspec = pspecs[i];
+        g_print("prop name: %s\n", pspec->name);
+    }
+    GValue body = G_VALUE_INIT;
+    g_value_init(&body, G_TYPE_POINTER);
+    g_object_get_property(G_OBJECT(instance), "body", &body);
+    g_print("id: %p\n", g_value_get_pointer(&body));
+    // const char *to_json = device_message_to_json(instance);
+    // g_print("to json: %s\n", to_json);
     return 0;
 }

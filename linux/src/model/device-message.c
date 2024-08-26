@@ -1,349 +1,271 @@
 #include "device-message.h"
 
-struct _UMessage
+static void json_serializable_interface_init(JsonSerializableIface *iface);
+
+static GParamSpec *device_message_props[N_PROPS_DEVICE_MESSAGE] = {NULL};
+
+struct _DeviceMessage
 {
-    GObject parent;
-
-    long time;
-    const gchar *type;
-    UMessageHeader *header;
-    UMessagePayload *payload;
-    JsonObject *body;
-};
-
-struct _UMessageHeader
-{
-    GObject parent;
-
-    const char *type;
+    GObject parent_instance;
+    const char *id;
     const char *method;
+    const char *type;
     const char *status;
+    guint64 timestamp;
+    JsonNode *body;
 };
 
-struct _UMessagePayload
+G_DEFINE_FINAL_TYPE_WITH_CODE(
+    DeviceMessage,
+    device_message,
+    G_TYPE_OBJECT,
+    G_IMPLEMENT_INTERFACE(
+        JSON_TYPE_SERIALIZABLE,
+        json_serializable_interface_init))
+
+static void device_message_get_property(GObject *object, guint property_id, GValue *value, GParamSpec *pspec)
 {
-    GObject parent;
-
-    int port;
-    long size;
-};
-
-G_DEFINE_TYPE(UMessage, u_message, G_TYPE_OBJECT)
-G_DEFINE_TYPE(UMessageHeader, u_message_header, G_TYPE_OBJECT)
-G_DEFINE_TYPE(UMessagePayload, u_message_payload, G_TYPE_OBJECT)
-
-enum {
-    PROP_MESSAGE_TIME,
-    PROP_MESSAGE_TYPE,
-    PROP_MESSAGE_HEADER,
-    PROP_MESSAGE_PAYLOAD,
-    PROP_MESSAGE_BODY,
-    N_PROP_MESSAGE
-};
-GParamSpec *message_time_pspec;
-GParamSpec *message_type_pspec;
-GParamSpec *message_header_pspec;
-GParamSpec *message_payload_pspec;
-GParamSpec *message_body_pspec;
-
-enum {
-    PROP_MESSAGE_HEADER_TYPE,
-    PROP_MESSAGE_HEADER_METHOD,
-    PROP_MESSAGE_HEADER_STATUS,
-    N_PROP_MESSAGE_HEADER
-};
-GParamSpec *message_header_type_pspec;
-GParamSpec *message_header_method_pspec;
-GParamSpec *message_header_status_pspec;
-
-enum {
-    PROP_MESSAGE_PAYLOAD_PORT,
-    PROP_MESSAGE_PAYLOAD_SIZE,
-    N_PROP_MESSAGE_PAYLOAD
-};
-GParamSpec *message_payload_port_pspec;
-GParamSpec *message_payload_size_pspec;
-
-static void u_message_get_property(GObject *object, guint property_id, GValue *value, GParamSpec *pspec)
-{
-    UMessage *message = U_MESSAGE(object);
-
+    DeviceMessage *self = DEVICE_MESSAGE(object);
     switch (property_id)
     {
-    case PROP_MESSAGE_TIME:
-        g_value_set_long(value, message->time);
+    case PROP_DEVICE_MESSAGE_ID:
+        g_value_set_string(value, g_strdup(self->id));
         break;
-    case PROP_MESSAGE_TYPE:
-        g_value_set_string(value, message->type);
+    case PROP_DEVICE_MESSAGE_METHOD:
+        g_value_set_string(value, g_strdup(self->method));
         break;
-    case PROP_MESSAGE_HEADER:
-        g_value_set_object(value, message->header);
+    case PROP_DEVICE_MESSAGE_TYPE:
+        g_value_set_string(value, g_strdup(self->type));
         break;
-    case PROP_MESSAGE_PAYLOAD:
-        g_value_set_object(value, message->payload);
+    case PROP_DEVICE_MESSAGE_STATUS:
+        g_value_set_string(value, g_strdup(self->status));
         break;
-    case PROP_MESSAGE_BODY:
-        g_value_set_object(value, message->body);
+    case PROP_DEVICE_MESSAGE_TIMESTAMP:
+        g_value_set_uint64(value, self->timestamp);
+        break;
+    case PROP_DEVICE_MESSAGE_BODY:
+        g_value_set_pointer(value, self->body);
         break;
     default:
-        G_OBJECT_WARN_INVALID_PROPERTY_ID(object, property_id, pspec);
+        G_OBJECT_WARN_INVALID_PROPERTY_ID(self, property_id, pspec);
         break;
     }
 }
 
-static void u_message_set_property(GObject *object, guint property_id, const GValue *value, GParamSpec *pspec)
+static void device_message_set_property(GObject *object, guint property_id, const GValue *value, GParamSpec *pspec)
 {
-    UMessage *message = U_MESSAGE(object);
-
+    g_print("device_message_set_property: %s\n", pspec->name);
+    DeviceMessage *self = DEVICE_MESSAGE(object);
     switch (property_id)
     {
-    case PROP_MESSAGE_TIME:
-        message->time = g_value_get_long(value);
+    case PROP_DEVICE_MESSAGE_ID:
+        self->id = g_strdup(g_value_get_string(value));
         break;
-    case PROP_MESSAGE_TYPE:
-        message->type = g_value_get_string(value);
+    case PROP_DEVICE_MESSAGE_METHOD:
+        self->method = g_strdup(g_value_get_string(value));
         break;
-    case PROP_MESSAGE_HEADER:
-        message->header = U_MESSAGE_HEADER(g_value_get_object(value));
+    case PROP_DEVICE_MESSAGE_TYPE:
+        self->type = g_strdup(g_value_get_string(value));
         break;
-    case PROP_MESSAGE_PAYLOAD:
-        message->payload = U_MESSAGE_PAYLOAD(g_value_get_object(value));
+    case PROP_DEVICE_MESSAGE_STATUS:
+        self->status = g_strdup(g_value_get_string(value));
         break;
-    case PROP_MESSAGE_BODY:
-        message->body = g_value_get_object(value);
+    case PROP_DEVICE_MESSAGE_TIMESTAMP:
+        self->timestamp = g_value_get_uint64(value);
+        break;
+    case PROP_DEVICE_MESSAGE_BODY:
+        self->body = (JsonNode *)g_value_get_pointer(value);
         break;
     default:
-        G_OBJECT_WARN_INVALID_PROPERTY_ID(object, property_id, pspec);
+        G_OBJECT_WARN_INVALID_PROPERTY_ID(self, property_id, pspec);
         break;
     }
 }
 
-static void u_message_dispose(GObject *object) {
-    UMessage *self = U_MESSAGE(object);
-    g_object_unref(self->header);
-    g_object_unref(self->payload);
-    g_object_unref(self->body);
-    G_OBJECT_CLASS(u_message_parent_class)->dispose(object);
-}
-
-static void u_message_class_init(UMessageClass *klass)
-{
-    GObjectClass *gobject_class = G_OBJECT_CLASS(klass);
-    gobject_class->get_property = u_message_get_property;
-    gobject_class->set_property = u_message_set_property;
-    gobject_class->dispose = u_message_dispose;
-    message_time_pspec = g_param_spec_long("time", "time", "Message timestamp", 0, G_MAXLONG, 0, G_PARAM_READWRITE);
-    message_type_pspec = g_param_spec_string("type", "type", "Message type", NULL, G_PARAM_READWRITE);
-    message_header_pspec = g_param_spec_object("header", "header", "Messager header", U_TYPE_MESSAGE_HEADER, G_PARAM_READWRITE);
-    message_payload_pspec = g_param_spec_object("payload", "payload", "Message payload", U_TYPE_MESSAGE_PAYLOAD, G_PARAM_READWRITE);
-    message_body_pspec = g_param_spec_object("body", "body", "Message body", JSON_TYPE_OBJECT, G_PARAM_READABLE);
-    g_object_class_install_property(gobject_class, PROP_MESSAGE_TIME, message_time_pspec);
-    g_object_class_install_property(gobject_class, PROP_MESSAGE_TYPE, message_type_pspec);
-    g_object_class_install_property(gobject_class, PROP_MESSAGE_HEADER, message_header_pspec);
-    g_object_class_install_property(gobject_class, PROP_MESSAGE_PAYLOAD, message_payload_pspec);
-    g_object_class_install_property(gobject_class, PROP_MESSAGE_BODY, message_body_pspec);
-}
-
-static void u_message_init(UMessage *message)
-{
-    message->header = NULL;
-    message->payload = NULL;
-}
-
-static void u_message_header_get_property(GObject *object, guint property_id, GValue *value, GParamSpec *pspec)
-{
-    UMessageHeader *header = U_MESSAGE_HEADER(object);
-
-    switch (property_id)
-    {
-        case PROP_MESSAGE_HEADER_TYPE:
-            g_value_set_string(value, header->type);
-            break;
-        case PROP_MESSAGE_HEADER_METHOD:
-            g_value_set_string(value, header->method);
-            break;
-        case PROP_MESSAGE_HEADER_STATUS:
-            g_value_set_string(value, header->status);
-            break;
-        default:
-            G_OBJECT_WARN_INVALID_PROPERTY_ID(object, property_id, pspec);
-            break;
-    }
-}
-
-static void u_message_header_set_property(GObject *object, guint property_id, const GValue *value, GParamSpec *pspec)
-{
-    UMessageHeader *header = U_MESSAGE_HEADER(object);
-
-    switch (property_id)
-    {
-        case PROP_MESSAGE_HEADER_TYPE:
-            header->type = g_value_get_string(value);
-            break;
-        case PROP_MESSAGE_HEADER_METHOD:
-            header->method = g_value_get_string(value);
-            break;
-        case PROP_MESSAGE_HEADER_STATUS:
-            header->status = g_value_get_string(value);
-            break;
-        default:
-            G_OBJECT_WARN_INVALID_PROPERTY_ID(object, property_id, pspec);
-            break;
-    }
-}
-
-static void u_message_header_class_init(UMessageHeaderClass *klass)
+static void device_message_class_init(DeviceMessageClass *klass)
 {
     GObjectClass *object_class = G_OBJECT_CLASS(klass);
-    object_class->get_property = u_message_header_get_property;
-    object_class->set_property = u_message_header_set_property;
-    message_header_type_pspec = g_param_spec_string("type", "type", "Message header type", U_MESSAGE_HEADER_TYPE_REQUEST, G_PARAM_READWRITE);
-    message_header_method_pspec = g_param_spec_string("method", "method", "Message header method", NULL, G_PARAM_READWRITE);
-    message_header_status_pspec = g_param_spec_string("status", "status", "Message header status", NULL, G_PARAM_READWRITE);
-    g_object_class_install_property(object_class, PROP_MESSAGE_HEADER_TYPE, message_header_type_pspec);
-    g_object_class_install_property(object_class, PROP_MESSAGE_HEADER_METHOD, message_header_method_pspec);
-    g_object_class_install_property(object_class, PROP_MESSAGE_HEADER_STATUS, message_header_status_pspec);
+    object_class->get_property = device_message_get_property;
+    object_class->set_property = device_message_set_property;
+    device_message_props[PROP_DEVICE_MESSAGE_ID] = g_param_spec_string(
+        "id",
+        "id",
+        "Identification",
+        "",
+        G_PARAM_READWRITE);
+    device_message_props[PROP_DEVICE_MESSAGE_METHOD] = g_param_spec_string(
+        "method",
+        "method",
+        "Method",
+        "",
+        G_PARAM_READWRITE);
+    device_message_props[PROP_DEVICE_MESSAGE_TYPE] = g_param_spec_string(
+        "type",
+        "type",
+        "Type",
+        "",
+        G_PARAM_READWRITE);
+    device_message_props[PROP_DEVICE_MESSAGE_STATUS] = g_param_spec_string(
+        "status",
+        "status",
+        "Status",
+        "",
+        G_PARAM_READWRITE);
+    device_message_props[PROP_DEVICE_MESSAGE_TIMESTAMP] = g_param_spec_uint64(
+        "timestamp",
+        "timestamp",
+        "Timestamp",
+        0,
+        G_MAXUINT64,
+        0,
+        G_PARAM_READWRITE);
+    device_message_props[PROP_DEVICE_MESSAGE_BODY] = g_param_spec_pointer(
+        "body",
+        "body",
+        "Body",
+        G_PARAM_READWRITE);
+    g_object_class_install_properties(object_class, N_PROPS_DEVICE_MESSAGE, device_message_props);
 }
 
-static void u_message_header_init(UMessageHeader *header)
+static void device_message_init(DeviceMessage *self)
 {
-    header->type = U_MESSAGE_HEADER_TYPE_REQUEST;
-    header->method = NULL;
-    header->status = NULL;
+    self->id = NULL;
+    self->method = NULL;
+    self->type = NULL;
+    self->status = NULL;
+    self->timestamp = 0;
+    self->body = NULL;
 }
 
-static void u_message_payload_get_property(GObject *object, guint property_id, GValue *value, GParamSpec *pspec)
+static JsonNode *device_message_serialize_property(
+    JsonSerializable *serializable,
+    const gchar *property_name,
+    const GValue *value,
+    GParamSpec *pspec)
 {
-    UMessagePayload *payload = U_MESSAGE_PAYLOAD(object);
+    JsonNode *node = NULL;
+    GList *str_props = NULL;
+    str_props = g_list_prepend(str_props, "id");
+    str_props = g_list_prepend(str_props, "method");
+    str_props = g_list_prepend(str_props, "type");
+    str_props = g_list_prepend(str_props, "status");
 
-    switch (property_id)
+    GList *result_ptrs = g_list_find(str_props, property_name);
+
+    if (g_list_length(result_ptrs))
     {
-        case PROP_MESSAGE_PAYLOAD_PORT:
-            g_value_set_int(value, payload->port);
-            break;
-        case PROP_MESSAGE_PAYLOAD_SIZE:
-            g_value_set_int(value, payload->size);
-            break;
-        default:
-            G_OBJECT_WARN_INVALID_PROPERTY_ID(object, property_id, pspec);
-            break;
+        node = json_node_new(JSON_NODE_VALUE);
+        json_node_set_string(node, g_value_get_string(value));
     }
-}
-
-static void u_message_payload_set_property(GObject *object, guint property_id, const GValue *value, GParamSpec *pspec)
-{
-    UMessagePayload *payload = U_MESSAGE_PAYLOAD(object);
-
-    switch (property_id)
+    else if (g_str_equal(property_name, "timestamp"))
     {
-        case PROP_MESSAGE_PAYLOAD_PORT:
-            payload->port = g_value_get_int(value);
-            break;
-        case PROP_MESSAGE_PAYLOAD_SIZE:
-            payload->size = g_value_get_int(value);
-            break;
-        default:
-            G_OBJECT_WARN_INVALID_PROPERTY_ID(object, property_id, pspec);
-            break;
+        node = json_node_new(JSON_NODE_VALUE);
+        json_node_set_int(node, g_value_get_int64(value));
     }
+    else
+    {
+        node = json_node_new(JSON_NODE_OBJECT);
+        json_node_set_parent((JsonNode *)g_value_get_pointer(value), node);
+    }
+    g_list_free(str_props);
+    g_list_free(result_ptrs);
+    return node;
 }
 
-static void u_message_payload_class_init(UMessagePayloadClass *klass)
+static gboolean device_message_deserialize_property(
+    JsonSerializable *serializable,
+    const gchar *property_name,
+    GValue *value,
+    GParamSpec *pspec,
+    JsonNode *property_node)
 {
-    GObjectClass *object_class = G_OBJECT_CLASS(klass);
-    object_class->get_property = u_message_payload_get_property;
-    object_class->set_property = u_message_payload_set_property;
-    message_payload_port_pspec = g_param_spec_int("port", "port", "Message payload port", 0, 65535, 0, G_PARAM_READWRITE);
-    message_payload_size_pspec = g_param_spec_long("size", "size", "Message payload size", 0, G_MAXLONG, 0, G_PARAM_READWRITE);
-    g_object_class_install_property(object_class, PROP_MESSAGE_PAYLOAD_PORT, message_payload_port_pspec);
-    g_object_class_install_property(object_class, PROP_MESSAGE_PAYLOAD_SIZE, message_payload_size_pspec);
+    if (
+        g_str_equal(property_name, "id") ||
+        g_str_equal(property_name, "method") ||
+        g_str_equal(property_name, "type") ||
+        g_str_equal(property_name, "status"))
+    {
+        g_value_set_string(value, json_node_get_string(property_node));
+    }
+    else if (g_str_equal(property_name, "timestamp"))
+    {
+        g_value_set_uint64(value, (guint64)json_node_get_int(property_node));
+    }
+    else if (g_str_equal(property_name, "body"))
+    {
+        g_value_set_pointer(value, property_node);
+    }
+    else
+    {
+        return FALSE;
+    }
+    return TRUE;
 }
 
-static void u_message_payload_init(UMessagePayload *payload)
-{}
-
-UMessage *u_message_new_with_values(int time, const gchar *type, JsonObject *body, UMessageHeader *header, UMessagePayload *payload)
+static void device_message_json_get_property(
+    JsonSerializable *serializable,
+    GParamSpec *pspec,
+    GValue *value)
 {
-    UMessage *message = g_object_new(U_TYPE_MESSAGE, NULL);
-    message->time = time;
-    message->type = type;
-    message->header = header;
-    message->payload = payload;
-    message->body = body;
-    return message;
+    DeviceMessage *self = DEVICE_MESSAGE(serializable);
+    g_object_get_property(G_OBJECT(self), pspec->name, value);
 }
 
-UMessageHeader *u_message_header_new_with_values(const gchar *type, const gchar *method, const gchar *status)
+static void device_message_json_set_property(
+    JsonSerializable *serializable,
+    GParamSpec *pspec,
+    const GValue *value)
 {
-    UMessageHeader *header = g_object_new(U_TYPE_MESSAGE_HEADER, NULL);
-    header->type = type;
-    header->method = method;
-    header->status = status;
-    return header;
+    DeviceMessage *self = DEVICE_MESSAGE(serializable);
+    g_print("device_message_json_set_property: %s\n", pspec->name);
+    g_object_set_property(G_OBJECT(self), pspec->name, value);
 }
 
-UMessagePayload *u_message_payload_new_with_values(int port, int size)
+static GParamSpec **device_message_list_properties(
+    JsonSerializable *serializable,
+    guint *n_pspecs)
 {
-    UMessagePayload *payload = g_object_new(U_TYPE_MESSAGE_PAYLOAD, NULL);
-    payload->port = port;
-    payload->size = size;
-    return payload;
+    *n_pspecs = N_PROPS_DEVICE_MESSAGE;
+    return device_message_props;
 }
 
-JsonObject *u_message_to_json(UMessage *self)
+static GParamSpec *device_message_find_property(
+    JsonSerializable *serializable,
+    const char *name)
 {
-    JsonObject *object = json_object_new();
-    json_object_set_int_member(object, "time", self->time);
-    json_object_set_string_member(object, "type", self->type);
-    json_object_set_object_member(object, "header", u_message_header_to_json(self->header));
-    json_object_set_object_member(object, "payload", u_message_payload_to_json(self->payload));
-    json_object_set_object_member(object, "body", self->body);
-    return object;
+    return g_object_class_find_property(
+        G_OBJECT_GET_CLASS(serializable),
+        name);
 }
 
-JsonObject *u_message_header_to_json(UMessageHeader *self)
+static void json_serializable_interface_init(JsonSerializableIface *iface)
 {
-    JsonObject *object = json_object_new();
-    json_object_set_string_member(object, "type", self->type);
-    json_object_set_string_member(object, "method", self->method);
-    json_object_set_string_member(object, "status", self->status);
-    return object;
+    iface->serialize_property = device_message_serialize_property;
+    iface->deserialize_property = device_message_deserialize_property;
+    iface->get_property = device_message_json_get_property;
+    iface->set_property = device_message_json_set_property;
+    iface->list_properties = device_message_list_properties;
+    iface->find_property = device_message_find_property;
 }
 
-JsonObject *u_message_payload_to_json(UMessagePayload *self)
+DeviceMessage *device_message_from_json(const char *raw_string)
 {
-    JsonObject *object = json_object_new();
-    json_object_set_int_member(object, "port", self->port);
-    json_object_set_int_member(object, "size", self->size);
-    return object;
+    GError *error = NULL;
+    GObject *obj = json_gobject_from_data(
+        DEVICE_TYPE_MESSAGE,
+        raw_string,
+        -1,
+        &error);
+    if (error)
+    {
+        g_printerr("Cannot parse DeviceMessage from JSON: %s\n", error->message);
+        g_error_free(error);
+        return NULL;
+    }
+    return DEVICE_MESSAGE(obj);
 }
 
-void u_message_body_put_string_data(UMessage *self, const char *key, const char *value)
+const char *device_message_to_json(DeviceMessage *self)
 {
-    json_object_set_string_member(self->body, key, value);
-}
-
-void u_message_body_put_int_data(UMessage *self, const char *key, int value)
-{
-    json_object_set_int_member(self->body, key, value);
-}
-
-void u_message_body_put_bool_data(UMessage *self, const char *key, gboolean value)
-{
-    json_object_set_boolean_member(self->body, key, value);
-}
-
-void u_message_body_put_double_data(UMessage *self, const char *key, double value)
-{
-    json_object_set_double_member(self->body, key, value);
-}
-
-void u_message_body_put_array_data(UMessage *self, const char *key, JsonArray *value)
-{
-    json_object_set_array_member(self->body, key, value);
-}
-
-void u_message_body_put_object_data(UMessage *self, const char *key, JsonObject *value)
-{
-    json_object_set_object_member(self->body, key, value);
+    return json_gobject_to_data(G_OBJECT(self), NULL);
 }
